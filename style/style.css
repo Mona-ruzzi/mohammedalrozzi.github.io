@@ -1,0 +1,368 @@
+ @import url('https://fonts.googleapis.com/css?family=Alegreya|Amiri|Aref+Ruqaa|Harmattan|Overpass+Mono|Tajawal&display=swap');
+/*body {
+ -webkit-animation:a 50s infinite;
+ animation:a 50s infinite;
+}
+@-webkit-keyframes a {
+ 0% {
+  background:#9b59b6
+ }
+ 25% {
+  background:#f1c40f
+ }
+ 50% {
+  background:#3498db
+ }
+ 75% {
+  background:#1abc9c
+ }
+ to {
+  background:#9b59b6
+ }
+}
+@keyframes a {
+ 0% {
+  background:#9b59b6
+ }
+ 25% {
+  background:#f1c40f
+ }
+ 50% {
+  background:#3498db
+ }
+ 75% {
+  background:#1abc9c
+ }
+ to {
+  background:#9b59b6
+ }
+}
+*/
+body{
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.41' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(17) translate(-941.18 -705.88)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  color: #212733;
+ }
+  .nav-bar1 {
+    font-size:15px;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color:white;
+    padding:8px;
+    font-family: 'Alegreya', serif;
+    transition: 1s;
+  }
+  .nav-bar1:hover {
+    background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+
+  }
+  .nav-bar {
+    background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+    height: 25px;
+    margin-bottom: 5px;
+    font-family: 'rubik';
+    padding:5px;
+    color:blanchedalmond;
+    font-weight: lighter;
+    font-size: 18px;
+  }
+  .box { 
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+
+  }
+
+  img {
+    margin: 40px;
+    box-shadow: 0px .5px 2px #7e7979;
+    border-radius: 10px;
+    transition: box-shadow 1s;
+  }
+img:hover{
+    box-shadow: 0px 0px 0px #d8d8d8;
+}
+  .product-image {
+    width: 80%;
+  }
+
+  .product-image,
+  .product-info {
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  .left,
+  .right,
+  .middle {
+    margin-top: 10px;
+    margin-right:auto;
+    margin-left:auto;
+    width: 280px;
+    box-shadow: 0px 0px 0px #d8d8d8;
+    background-color: #eef7f4;
+    transition:1s;
+    color: #34495e;
+    border-radius: 10px;
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+    background-color: blanchedalmond;
+  }
+  .left:hover,
+  .right:hover,
+  .middle:hover {
+    margin-top: 10px;
+    margin-right:auto;
+    margin-left:auto;
+    box-shadow: 0px .5px 10px #857c7c;
+    background-color: #c8e6dc;
+    
+  }
+  .color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+  }
+
+  .cart {
+    background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+    margin-right: 25px;
+    float: right;
+    border: 1px solid #d8d8d8;
+    padding: 5px 20px;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Rubik';
+    background-color: transparent;
+  }
+
+  .disabledButton {
+    background-color: #d8d8d8;
+  }
+
+  .review-form {
+    width: 400px;
+    padding: 20px;
+    margin: 40px;
+    border: 1px solid #d8d8d8;
+  }
+
+  input {
+    width: 35%;
+    height: 25px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 60px;
+  }
+
+  .tab {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .activeTab {
+    color: #16C0B0;
+    text-decoration: underline;
+  }
+  .down-arrow {
+    font-size: 80px;
+    text-shadow: 0px -20px #0C1F31, 0px 0px #C33329;
+    color: rgba(0,0,0,0);
+    -webkit-transform: scaleY(0.8);
+    -moz-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+    margin: auto}
+.last-square {
+  font-size: 120px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  text-shadow: 0px -20px #0C1F31, 0px 0px #C33329;
+  color: rgba(0,0,0,0);
+  -webkit-transform: scaleY(0.8);
+  -moz-transform: scaleY(0.8);
+  transform: scaleY(0.8);
+}
+.new-arrow {
+  font-size: 80px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-shadow: 3px -5px #0C1F31, 0px 0px #C33329;
+  color: rgba(0,0,0,0);
+  -webkit-transform: scaleY(0.8);
+  -moz-transform: scaleY(0.8);
+  transform: scaleY(0.8);
+}
+
+.app{
+  padding:20px;
+  margin-left: 20px;
+  width:90%;
+}
+.charts_box{
+  padding:5px;
+  width: 80%;
+  margin:0 auto
+}
+.app_Chart,
+.app_Chart_UK,
+.app_Chart_israel,
+.app_Chart_Umbria,
+.app_Chart_Spain{
+  background: #212733;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(25, 25, 25, .27);
+  margin-top: 50px;
+  font-family: "Rubik";
+  text-align: center;
+  padding-top: 25px;
+}
+.heading2 {
+  font-size: 15px;
+}
+.tra{
+background:#4b6cb7;
+width: 30px;
+height: 7px;
+transition: width 1s; background :1s;
+
+}
+.tra:hover{
+width: 100%;
+background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+}
+.summary{
+  text-align: left;
+  font-size: smaller; 
+  font-family: roboto; 
+  margin-left: 10px; 
+  width:28%;
+  border-left: #84CF6A solid 5px;
+  padding:13px;
+  background-color: #eef7f4;
+  box-shadow: 0px .5px 3px #d8d8d8;
+  border-radius: 12px;
+  transition: background-color box-shadow 1s;
+}
+
+.summary:hover{
+  background-color: #c8e6dc;
+  box-shadow: 0px .5px 10px #857c7c;
+}
+h1{
+  font-family: "Rubik";
+  text-align: center;
+  color: #efefef;
+}
+#invisible{
+  display: none;
+}
+.last_line {
+  text-align: left; 
+  font-size: smaller; 
+  font-family: roboto; 
+  color:#34495e
+}
+#heading_chart{
+  color:gray;
+  font-size: larger;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+/* arabic fonts-- place the first line in the first line of the CSS file and refer to the font you wish to use.
+
+
+
+    font-family: 'Alegreya', serif;
+    font-family: 'Harmattan', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+    font-family: 'Amiri', serif;
+    font-family: 'Aref Ruqaa', serif;
+*/
+i{
+  color:#212733;
+  font-size: 70px;
+  text-align: center;
+
+}
+p{
+  font-family: 'Rubik';
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+#intexticons {
+font-size: 18px;
+}
+div .svg{
+      background-image: url("cool-background.svg");
+
+}
+.container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  background-color: blanchedalmond;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0px .5px 2px #7e7979;
+  border-radius: 10px;
+  transition: 1s;
+}
+.container:hover{
+  box-shadow: 0px .5px 10px #857c7c;
+  background-color: #c8e6dc;
+}
+.mono1{
+font-family: 'Tajawal', sans-serif;
+font-weight: 400;
+font-style: normal;
+margin-right: 20px;
+}
+.charty{
+  display: flex; 
+  flex-flow: wrap; 
+  padding: 1rem; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 60%;
+  background-color: blanchedalmond;
+  border-radius: 9px;
+  box-shadow: 0px .5px 5px #857c7c;
+}
+.app_Chart_new{
+  display: flex; 
+  flex-flow: wrap; 
+  padding: 1rem; 
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: blanchedalmond;
+  border-radius: 9px;
+  box-shadow: 0px .5px 5px #857c7c;
+}
+.your-class-name{
+    background: linear-gradient( 
+        rgb(8, 44, 54, .7), 
+        rgb(108, 175, 194, 0.3) 
+    ), url("/assets/Toshl_2.0_monster_0003_4.png"); /* Change this to your image */
+
+    /* Adjust the dimentions to your requirements */
+    width: 800px;
+    height: 950px;
+}
