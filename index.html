@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
+    <title>personalized corona tracking</title>
+    <script src="https://kit.fontawesome.com/d41a2ff516.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+      integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/zok6cds.css">
+    </head>
+  <body>
+    <div style="text-align: center;">
+      <h1 dir="rtl" style="font-family: 'Aref Ruqaa', serif; font-size: 60px; padding-top: 10px; color: #212733;"> صفحة تجريب</h1>
+    </div>
+
+    <canvas id="myCanvas" style="display: none;"></canvas>
+    <div style="text-align: center; padding-top: 50px; display: none;" >
+      <canvas id="clock" width="150" height="150">
+        Fehlermeldung
+      </canvas>
+    </div>   
+
+
+  <div id="app365" style="text-align: center;">
+    <button class="down-arrow" v-scroll-to="{ element: '#element', duration: 5000 }">▼</button>
+  </div>
+  <div style="color: chocolate;">
+    <p style="margin-left: 50px; text-align: left; font-size: 12px; font-weight: lighter;" id="welcomemessage">Today is:
+      {{ welcome_date }} and the local time is:
+      {{ welcome_time }}</p>
+  </div>
+    <div class="box" style="padding-bottom: 60px;">
+      <div class="left">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Italy</h1>
+      <div id="italy-figures">
+        <p v-if="errored">the information currently unavailable</p>
+        <p v-else-if="loading">loading...</p>
+        <div v-else>
+        <p>Confirmed: {{info.data.confirmed}}</p>
+        <p>Deaths: {{info.data.deaths}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="left">
+      <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Spain</h1>
+      <div id="spain-figures">
+        <p v-if="errored">the information currently unavailable</p>
+        <p v-else-if="loading">loading...</p>
+        <div v-else>
+        <p>Confirmed: {{info.data.confirmed}}</p>
+        <p>Deaths: {{info.data.deaths}}</p>
+        </div>
+      </div>
+    </div>
+   
+      <div class="left">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Morocco</h1>
+        <div id="morocco-figures">
+          <p v-if="errored">the information currently unavailable</p>
+          <p v-else-if="loading">loading...</p>
+          <div v-else>
+          <p>Confirmed: {{info.data.confirmed}}</p>
+          <p>Deaths: {{info.data.deaths}}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="left">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Qatar</h1>
+        <div id="qatar-figures">
+          <p v-if="errored">the information currently unavailable</p>
+          <p v-else-if="loading">loading...</p>
+          <div v-else>
+          <p>Confirmed: {{info.data.confirmed}}</p>
+          <p>Deaths: {{info.data.deaths}}</p>
+          </div>
+        </div>
+      </div>
+
+            <div class="left">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Oman</h1>
+              <div id="oman-figures">
+                <p v-if="errored">the information currently unavailable</p>
+                <p v-else-if="loading">loading...</p>
+                <div v-else>
+                <p>Confirmed: {{info.data.confirmed}}</p>
+                <p>Deaths: {{info.data.deaths}}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="left">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in WB & Gaza</h1>
+              <div id="WBG-figures">
+                <p v-if="errored">the information currently unavailable</p>
+                <p v-else-if="loading">loading...</p>
+                <div v-else>
+                <p>Confirmed: {{info.data.confirmed}}</p>
+                <p>Deaths: {{info.data.deaths}}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="left">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in US</h1>
+              <div id="US-figures">
+                <p v-if="errored">the information currently unavailable</p>
+                <p v-else-if="loading">loading...</p>
+                <div v-else>
+                <p>Confirmed: {{info.data.confirmed}}</p>
+                <p>Deaths: {{info.data.deaths}}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="left">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in the UK</h1>
+              <div id="GB-figures">
+                <p v-if="errored">the information currently unavailable</p>
+                <p v-else-if="loading">loading...</p>
+                <div v-else>
+                <p>Confirmed: {{info.data.confirmed}}</p>
+                <p>Deaths: {{info.data.deaths}}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="left">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Australia</h1>
+              <div id="australia-figures">
+                <p v-if="errored">the information currently unavailable</p>
+                <p v-else-if="loading">loading...</p>
+                <div v-else>
+                  <p>Confirmed: {{info.data.confirmed}}</p>
+                  <p>Deaths: {{info.data.deaths}}</p>
+                </div>
+              </div>
+            </div>
+<div class="left">
+  <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in France</h1>
+  <div id="france-figures">
+    <p v-if="errored">the information currently unavailable</p>
+    <p v-else-if="loading">loading...</p>
+    <div v-else>
+      <p>Confirmed: {{info.data.confirmed}}</p>
+      <p>Deaths: {{info.data.deaths}}</p>
+    </div>
+  </div>
+</div>
+
+
+    <div class="left">
+      <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i>Links for other countries</h1>
+      <div>
+        <ul style="text-align: left;">
+          <li><p>Here are more details on: <a href="http://www.salute.gov.it/nuovocoronavirus" target="_blank">Italy (official) </a> , in <a href="./COVITA/index.html" target="_blank">graphs
+          </a> and on <a href="https://covid19.isciii.es/" target="_blank">Spain (official)</a> and on <a href="http://site.moh.ps/Index/CategoryView/CategoryId/19/Language/ar" target="_blank">
+            Palestine</a></p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="middle">
+      <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i>
+Other countries</h1>
+<div>
+  <ul style="text-align: left;">
+    <li><p>Information on <a href="https://covid19data.co.il/" target="_blank">Israel</a>, <a href="https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx" target="_blank">Qatar</a>, <a href="https://www.moh.gov.om/en/" target="_blank">Oman</a> and <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Global</a> overview</p></li>
+  </ul>
+</div>
+    </div>
+
+  </div>
+<!--Gaza figures-->
+
+<div class="container" id="palestine-figures"style="width: 400px;">
+  <h2 class="nav-bar">Palestine figures </h2>
+  <p v-if="errored">the information currently unavailable</p>
+  <p v-else-if="loading">loading...</p>
+  <div v-else>
+    <table class="pure-table pure-table-horizontal" id="palestine-figures" style="width:400px; border: none;">
+      <tbody>
+        <tr>
+          <td><p>Total Cases</p></td>
+          <td><p>{{info.data.TotalPalestineCases}}</p></td>
+        </tr>
+        <tr>
+          <td><p>West Bank and Gaza</p></td>
+          <td><p>{{info.data.TotalCases}}</p></td>
+        </tr>
+        <tr>
+          <td><p>Gaza</p></td>
+          <td><p>{{info.data.TotalGazaCases}}</p></td>
+        </tr>
+        <tr>
+          <td><p>Death</p></td>
+          <td><p>{{info.data.TotalDeath}}</p></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+<!--new test-->
+
+<!--site mapping-->
+
+<div class="pure-menu pure-menu-horizontal" style="text-align:center;padding-top: 20px;">
+  <a href="#" class="pure-menu-heading pure-menu-link">HOME</a>
+  <ul class="pure-menu-list">
+    <li class="pure-menu-item">
+      <a href="/v02.html" class="pure-menu-link">Old Site</a>
+    </li>
+  </ul>
+</div>
+
+
+<!--the new charts-->
+<div class='charty'>
+  <canvas id="myChart" style="width:400px; height:400;"></canvas>
+</div>
+  <div class="app_Chart_new" style="display: none;"> 
+<bar-chart style="width:80%;margin-left: auto;margin-right: auto;"></bar-chart>
+  </div>
+<!--the endnotes-->
+
+><div class="center" style="text-align: left; font-size: smaller; font-family: roboto; color:#34495e">
+          <p class="tra"></p>  
+          <ol id="endnotes">
+              <li v-for="item in items" :key="item.message">
+                {{ item.message }}
+              </li>
+              <li>click <a href="/v02.html">here</a> for an older version of this page</li>
+
+            </ol>
+</div>
+
+<div class="new-arrow" style="display: none;">➔</div>
+<div>
+<img style="display:none" class="center" alt="logo"src="./assets/cool-background.svg" onerror="this.onerror=null; this.src='./assets/image.png'">
+<p class="last_line" style="float: right; margin-right: 50px;" id="welcomemessage">Made with <i class="fas fa-heart"
+    style="color: red; font-size: 12px;"></i> by Mohammed Alrozzi using <i class="fab fa-vuejs"style="font-size:12px"></i></p>
+</div>
+
+<!--a seperator:
+
+<hr class="style-eight"> -->
+  <!-- partial -->
+    <script src="./js/axioscalls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./js/main.js"></script>
+      <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+      <script src="./js/CoronaCharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+    <div id="app365">
+      <h1 id="element"></h1>
+    </div>
+      
+    <script>
+      new Vue({
+          el: '#app365',
+          methods: {
+          }
+        })
+    </script>
+</body>
+<footer>
+
+
+</footer>
+</html>
