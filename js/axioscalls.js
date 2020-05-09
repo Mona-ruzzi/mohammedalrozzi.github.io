@@ -247,3 +247,38 @@ new Vue({
       .finally(() => this.loading = false)
   }
 })
+
+//new simultaneous calls//
+/*
+new Vue({
+  el: '#allaxios',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  mounted() {
+    axios.all([
+      axios.get('https://covid2019-api.herokuapp.com/v2/country/Malta'),
+      axios.get('https://covid2019-api.herokuapp.com/v2/country/Holland')
+    ])
+      
+      .then(response => (this.info = response.data))
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => this.loading = false)
+  }
+})
+
+axios.all([
+  axios.get('http://google.com'),
+  axios.get('http://apple.com')
+])
+  .then(axios.spread((googleRes, appleRes) => {
+    // do something with both responses
+  }));
+  */
