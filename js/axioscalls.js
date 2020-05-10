@@ -282,3 +282,50 @@ axios.all([
     // do something with both responses
   }));
   */
+new Vue ({
+  el: '#helloWorld',
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      infoP: '',
+      infoI: '',
+      infoOM: '',
+      infoMA: '',
+      infoQA: '',
+      infoUS: '',
+      infoGB: '',
+    }
+  },
+  methods: {
+    async showPalestine() {
+      const infoP = await this.$http.get('https://www.corona.ps/API/summary');
+      this.infoP = infoP.data
+    },
+    async showItaly() {
+      const infoI = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations/137?source=jhu&timelines=false');
+      this.infoI = infoI.data.location
+    },
+    async showOMAN() {
+      const infoOM = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations/176?source=jhu&timelines=false');
+      this.infoOM = infoOM.data.location
+    },
+    async showMorocco() {
+      const infoMA = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations/163?source=jhu&timelines=false');
+      this.infoMA = infoMA.data.location
+    },
+    async showQATAR() {
+      const infoQA = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations/185?source=jhu&timelines=false');
+      this.infoQA = infoQA.data.location
+    },
+    async showtheUS() {
+      const infoUS = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations/225?source=jhu&timelines=false');
+      this.infoUS = infoUS.data.location
+    },
+    async showtheUK() {
+      const infoGB = await this.$http.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations?source=jhu&country_code=GB');
+      this.infoGB = infoGB.data
+    },
+  }
+})
