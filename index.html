@@ -177,65 +177,7 @@ Other countries</h1>
     </div>
 
   </div>
-<!--new vue-->
-<div id="helloWorld">
-  <h1>Statistics</h1>
-  <div class="vuecontainer">
-    <div class="vuebox">
-      <button @click="showtheUK()">The UK</button>
-      <div v-if="infoGB">
-        <p>Total Cases: {{infoGB.latest.confirmed}}</p>
-        <p>Total deaths: {{infoGB.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox">
-      <button @click="showItaly()">Italy</button>
-      <div v-if="infoI">
-        <p>Total Cases: {{infoI.latest.confirmed}}</p>
-        <p>Total deaths: {{infoI.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox">
-      <button @click="showMorocco()">Morocco</button>
-      <div v-if="infoMA">
-        <p>Total Cases: {{infoMA.latest.confirmed}}</p>
-        <p>Total deaths: {{infoMA.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox">
-      <button @click="showQATAR()">Qatar</button>
-      <div v-if="infoQA">
-        <p>Total Cases: {{infoQA.latest.confirmed}}</p>
-        <p>Total deaths: {{infoQA.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox">
-      <button @click="showOMAN()">Oman</button>
-      <div v-if="infoOM">
-        <p>Total Cases: {{infoOM.latest.confirmed}}</p>
-        <p>Total deaths: {{infoOM.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox">
-      <button @click="showtheUS()">The US</button>
-      <div v-if="infoUS">
-        <p>Total Cases: {{infoUS.latest.confirmed}}</p>
-        <p>Total deaths: {{infoUS.latest.deaths}}</p>
-      </div>
-    </div>
-    <div class="vuebox" style="height:200px">
-      <button @click="showPalestine()">Palestine</button>
-      <div v-if="infoP">
-        <p>Total Cases: {{infoP.data.TotalCases}}</p>
-        <p>Total Recovery: {{infoP.data.TotalRecovery}}</p>
-        <p>Total Active Cases: {{infoP.data.TotalActiveCases}}</p>
-        <p>Total Gaza Cases: {{infoP.data.TotalGazaCases}}</p>
-        <p>Total deaths: {{infoP.data.TotalDeath}}</p>
-      </div>
-    </div>
-  </div>
 
-</div>
 <!--Gaza figures-->
 
 <div class="container" id="palestine-figures"style="width: 400px;">
