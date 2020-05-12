@@ -27,6 +27,7 @@ new Vue({
   }
 })
 */
+
 new Vue({
   el: '#italy-figures',
   data() {
@@ -36,15 +37,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/italy')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/italy')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -56,15 +61,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/Spain')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/Spain')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -76,15 +85,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/Morocco')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/Morocco')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -96,15 +109,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/Qatar')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/Qatar')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -116,15 +133,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/Oman')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/Oman')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -136,15 +157,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/West%20Bank%20and%20Gaza')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/West%20Bank%20and%20Gaza')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -156,15 +181,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/US')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/US')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -176,15 +205,19 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/GB')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/GB')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
 new Vue({
@@ -196,18 +229,22 @@ new Vue({
       errored: false
     }
   },
-  mounted() {
-    axios
-      .get('https://covid2019-api.herokuapp.com/v2/country/Australia')
-      .then(response => (this.info = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/Australia')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
   }
 })
-new Vue({
+new Vue({ 
   el: '#france-figures',
   data() {
     return {
@@ -216,7 +253,9 @@ new Vue({
       errored:false
     }
   },
-  mounted() {
+  methods:{
+  
+  async mounted() {
     axios
       .get('https://covid2019-api.herokuapp.com/v2/country/France')
       .then(response => (this.info = response.data))
@@ -226,6 +265,8 @@ new Vue({
       })
       .finally(() => this.loading = false)
   }
+
+}
 })
 new Vue({
   el: '#palestine-figures',

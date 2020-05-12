@@ -37,117 +37,122 @@
   </div>
     <div class="box" style="padding-bottom: 60px;">
       <div class="left">
-        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Italy</h1>
-      <div id="italy-figures">
+        <div id="italy-figures">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Italy</button></h1>
         <p v-if="errored">the information currently unavailable</p>
-        <p v-else-if="loading">loading...</p>
+        <p v-else-if="loading">click to retreive information...</p>
         <div v-else>
-        <p>Confirmed: {{info.data.confirmed}}</p>
-        <p>Deaths: {{info.data.deaths}}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="left">
-      <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Spain</h1>
-      <div id="spain-figures">
-        <p v-if="errored">the information currently unavailable</p>
-        <p v-else-if="loading">loading...</p>
-        <div v-else>
-        <p>Confirmed: {{info.data.confirmed}}</p>
-        <p>Deaths: {{info.data.deaths}}</p>
+          <p>Confirmed: {{info.data.confirmed}}</p>
+          <p>Deaths: {{info.data.deaths}}</p>
         </div>
       </div>
     </div>
    
       <div class="left">
-        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Morocco</h1>
-        <div id="morocco-figures">
-          <p v-if="errored">the information currently unavailable</p>
-          <p v-else-if="loading">loading...</p>
-          <div v-else>
+        <div id="spain-figures">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Spain</button></h1>
+        <p v-if="errored">the information currently unavailable</p>
+        <p v-else-if="loading">click to retreive information...</p>
+        <div v-else>
           <p>Confirmed: {{info.data.confirmed}}</p>
           <p>Deaths: {{info.data.deaths}}</p>
-          </div>
         </div>
       </div>
+    </div>
       
       <div class="left">
-        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Qatar</h1>
-        <div id="qatar-figures">
-          <p v-if="errored">the information currently unavailable</p>
-          <p v-else-if="loading">loading...</p>
-          <div v-else>
+        <div id="morocco-figures">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Morocco</button></h1>
+        <p v-if="errored">the information currently unavailable</p>
+        <p v-else-if="loading">click to retreive information...</p>
+        <div v-else>
           <p>Confirmed: {{info.data.confirmed}}</p>
           <p>Deaths: {{info.data.deaths}}</p>
-          </div>
         </div>
       </div>
+    </div>
 
             <div class="left">
-              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Oman</h1>
-              <div id="oman-figures">
+              <div id="qatar-figures">
+                <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Qatar</button>
+                </h1>
                 <p v-if="errored">the information currently unavailable</p>
-                <p v-else-if="loading">loading...</p>
-                <div v-else>
-                <p>Confirmed: {{info.data.confirmed}}</p>
-                <p>Deaths: {{info.data.deaths}}</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="left">
-              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in WB & Gaza</h1>
-              <div id="WBG-figures">
-                <p v-if="errored">the information currently unavailable</p>
-                <p v-else-if="loading">loading...</p>
-                <div v-else>
-                <p>Confirmed: {{info.data.confirmed}}</p>
-                <p>Deaths: {{info.data.deaths}}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="left">
-              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in US</h1>
-              <div id="US-figures">
-                <p v-if="errored">the information currently unavailable</p>
-                <p v-else-if="loading">loading...</p>
-                <div v-else>
-                <p>Confirmed: {{info.data.confirmed}}</p>
-                <p>Deaths: {{info.data.deaths}}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="left">
-              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in the UK</h1>
-              <div id="GB-figures">
-                <p v-if="errored">the information currently unavailable</p>
-                <p v-else-if="loading">loading...</p>
-                <div v-else>
-                <p>Confirmed: {{info.data.confirmed}}</p>
-                <p>Deaths: {{info.data.deaths}}</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="left">
-              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in Australia</h1>
-              <div id="australia-figures">
-                <p v-if="errored">the information currently unavailable</p>
-                <p v-else-if="loading">loading...</p>
+                <p v-else-if="loading">click to retreive information...</p>
                 <div v-else>
                   <p>Confirmed: {{info.data.confirmed}}</p>
                   <p>Deaths: {{info.data.deaths}}</p>
                 </div>
               </div>
             </div>
+            
+        <div class="left">
+          <div id="oman-figures">
+            <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Oman</button>
+            </h1>
+            <p v-if="errored">the information currently unavailable</p>
+            <p v-else-if="loading">click to retreive information...</p>
+            <div v-else>
+              <p>Confirmed: {{info.data.confirmed}}</p>
+              <p>Deaths: {{info.data.deaths}}</p>
+            </div>
+          </div>
+        </div>
+
+    <div class="left">
+      <div id="WBG-figures">
+        <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">West Bank and Gaza</button>
+        </h1>
+        <p v-if="errored">the information currently unavailable</p>
+        <p v-else-if="loading">click to retreive information...</p>
+        <div v-else>
+          <p>Confirmed: {{info.data.confirmed}}</p>
+          <p>Deaths: {{info.data.deaths}}</p>
+        </div>
+      </div>
+    </div>
+
+          <div class="left">
+            <div id="US-figures">
+              <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">the US</button>
+              </h1>
+              <p v-if="errored">the information currently unavailable</p>
+              <p v-else-if="loading">click to retreive information...</p>
+              <div v-else>
+                <p>Confirmed: {{info.data.confirmed}}</p>
+                <p>Deaths: {{info.data.deaths}}</p>
+              </div>
+            </div>
+          </div>
+
+                <div class="left">
+                  <div id="GB-figures">
+                    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">the UK</button>
+                    </h1>
+                    <p v-if="errored">the information currently unavailable</p>
+                    <p v-else-if="loading">click to retreive information...</p>
+                    <div v-else>
+                      <p>Confirmed: {{info.data.confirmed}}</p>
+                      <p>Deaths: {{info.data.deaths}}</p>
+                    </div>
+                  </div>
+                </div>
+
+      <div class="left">
+        <div id="australia-figures">
+          <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Australia</button></h1>
+          <p v-if="errored">the information currently unavailable</p>
+          <p v-else-if="loading">click to retreive information...</p>
+          <div v-else>
+            <p>Confirmed: {{info.data.confirmed}}</p>
+            <p>Deaths: {{info.data.deaths}}</p>
+          </div>
+        </div>
+      </div>
 <div class="left">
-  <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> Corona in France</h1>
   <div id="france-figures">
+    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">France</button></h1>
     <p v-if="errored">the information currently unavailable</p>
-    <p v-else-if="loading">loading...</p>
+    <p v-else-if="loading">click to retreive information...</p>
     <div v-else>
       <p>Confirmed: {{info.data.confirmed}}</p>
       <p>Deaths: {{info.data.deaths}}</p>
@@ -224,18 +229,7 @@ Other countries</h1>
 <br>
 -->
 
-  <!--photo of the day-->
-  <div class="grid-container" style="display: none;">
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-  </div>
-
+  
 <!--the endnotes-->
 
 ><div class="center" style="text-align: left; font-size: smaller; font-family: roboto; color:#34495e">
