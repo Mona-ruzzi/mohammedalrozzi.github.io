@@ -1,10 +1,3 @@
-new Vue({
-    el:"#app400",
-    data:{
-        name:"Mohammed Alrozzi",
-        info:"this is a test thing, "
-    }
-    })
 
 var endnotes = new Vue({
     el: '#endnotes',

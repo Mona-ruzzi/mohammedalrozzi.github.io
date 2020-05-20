@@ -42,8 +42,9 @@
         <p v-if="errored">the information currently unavailable</p>
         <p v-else-if="loading">click to retreive information...</p>
         <div v-else>
-          <p>Confirmed: {{info.dataconfirmed}}</p>
+          <p>Confirmed: {{info.data.confirmed}}</p>
           <p>Deaths: {{info.data.deaths}}</p>
+          <p></p>
         </div>
       </div>
     </div>
