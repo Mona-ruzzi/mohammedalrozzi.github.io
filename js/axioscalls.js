@@ -269,6 +269,102 @@ new Vue({
 }
 })
 new Vue({
+  el: '#norway-figures',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/norway')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
+  }
+})
+new Vue({
+  el: '#egypt-figures',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/egypt')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
+  }
+})
+new Vue({
+  el: '#malta-figures',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/malta')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
+  }
+})
+new Vue({
+  el: '#test-figures',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+
+    async mounted() {
+      axios
+        .get('')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
+  }
+})
+new Vue({
   el: '#palestine-figures',
   data() {
     return {

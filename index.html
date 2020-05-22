@@ -186,7 +186,47 @@
   </div>
 </div>
 
+<div class="left">
+  <div id="norway-figures">
+    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Norway</button></h1>
+    <p v-if="errored">the information currently unavailable</p>
+    <p v-else-if="loading">click to retreive information...</p>
+    <div v-else>
+      <p>Confirmed: {{info.data.confirmed}}</p>
+      <p>Deaths: {{info.data.deaths}}</p>
+      <p>Recovered: {{info.data.recovered}}</p>
+      <p>Active: {{info.data.active}}</p>
+    </div>
+  </div>
+</div>
 
+<div class="left">
+  <div id="egypt-figures">
+    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Egypt</button></h1>
+    <p v-if="errored">the information currently unavailable</p>
+    <p v-else-if="loading">click to retreive information...</p>
+    <div v-else>
+      <p>Confirmed: {{info.data.confirmed}}</p>
+      <p>Deaths: {{info.data.deaths}}</p>
+      <p>Recovered: {{info.data.recovered}}</p>
+      <p>Active: {{info.data.active}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="left">
+  <div id="malta-figures">
+    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Malta</button></h1>
+    <p v-if="errored">the information currently unavailable</p>
+    <p v-else-if="loading">click to retreive information...</p>
+    <div v-else>
+      <p>Confirmed: {{info.data.confirmed}}</p>
+      <p>Deaths: {{info.data.deaths}}</p>
+      <p>Recovered: {{info.data.recovered}}</p>
+      <p>Active: {{info.data.active}}</p>
+    </div>
+  </div>
+</div>
     <div class="left">
       <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i>Links for other countries</h1>
       <div>
@@ -238,6 +278,30 @@ Other countries</h1>
     </table>
 
   </div>
+  <br>
+</div>
+<div class="container" style="width:min-content;">
+  <div id="mapdiv"></div>
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    var lonLat = new OpenLayers.LonLat(-0.1279688, 51.5077286)
+      .transform(
+        new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+        map.getProjectionObject() // to Spherical Mercator Projection
+      );
+
+    var zoom = 16;
+
+    var markers = new OpenLayers.Layer.Markers("Markers");
+    map.addLayer(markers);
+
+    markers.addMarker(new OpenLayers.Marker(lonLat));
+
+    map.setCenter(lonLat, zoom);
+  </script>
 </div>
 <br>
 
