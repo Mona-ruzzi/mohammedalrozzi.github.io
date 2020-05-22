@@ -376,3 +376,18 @@ margin-right: 20px;
   .disabledButton {
     background-color: #d8d8d8;
   }
+  .header{
+    display:flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #24292e;
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  .headerItem{
+color:hsla(0, 0%, 100%, .7);
+box-sizing: border-box;
+word-wrap: break-word;
+padding-left: 40px; 
+display: inline; 
+}
