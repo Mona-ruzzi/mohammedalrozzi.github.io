@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
       integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/zok6cds.css">
-    <script src="./js/axioscalls.js"></script>
-    <script src="./js/main.js"></script>
+    
 
 
     </head>
@@ -284,29 +283,7 @@ Other countries</h1>
   </div>
   <br>
 </div>
-<div class="container" style="width:min-content;">
-  <div id="mapdiv"></div>
-  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-  <script>
-    map = new OpenLayers.Map("mapdiv");
-    map.addLayer(new OpenLayers.Layer.OSM());
 
-    var lonLat = new OpenLayers.LonLat(-0.1279688, 51.5077286)
-      .transform(
-        new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-        map.getProjectionObject() // to Spherical Mercator Projection
-      );
-
-    var zoom = 16;
-
-    var markers = new OpenLayers.Layer.Markers("Markers");
-    map.addLayer(markers);
-
-    markers.addMarker(new OpenLayers.Marker(lonLat));
-
-    map.setCenter(lonLat, zoom);
-  </script>
-</div>
 <br>
 
 <!--the new charts-->
@@ -358,6 +335,8 @@ Other countries</h1>
 
 <hr class="style-eight"> -->
   <!-- partial -->
+  <script src="./js/axioscalls.js"></script>
+  <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
     <script src="./js/CoronaCharts.js"></script>
