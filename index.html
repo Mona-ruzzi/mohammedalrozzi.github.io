@@ -230,6 +230,19 @@
     </div>
   </div>
 </div>
+<div class="left">
+  <div id="jordan-figures">
+    <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i> <button @click="mounted()">Jordan</button></h1>
+    <p v-if="errored">the information currently unavailable</p>
+    <p v-else-if="loading">click to retreive information...</p>
+    <div v-else>
+      <p>Confirmed: {{info.data.confirmed}}</p>
+      <p>Deaths: {{info.data.deaths}}</p>
+      <p>Recovered: {{info.data.recovered}}</p>
+      <p>Active: {{info.data.active}}</p>
+    </div>
+  </div>
+</div>
     <div class="left">
       <h1 class=nav-bar><i class="fas fa-chart-line" id="intexticons"></i>Links for other countries</h1>
       <div>

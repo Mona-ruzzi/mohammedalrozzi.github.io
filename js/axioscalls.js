@@ -341,6 +341,30 @@ new Vue({
   }
 })
 new Vue({
+  el: '#jordan-figures',
+  data() {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  methods: {
+
+    async mounted() {
+      axios
+        .get('https://covid2019-api.herokuapp.com/v2/country/jordan')
+        .then(response => (this.info = response.data))
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+    }
+
+  }
+})
+new Vue({
   el: '#test-figures',
   data() {
     return {
