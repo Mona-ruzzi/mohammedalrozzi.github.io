@@ -409,6 +409,7 @@ new Vue({
   }
 })
 
+
 //new simultaneous calls//
 /*
 new Vue({
