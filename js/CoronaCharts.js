@@ -70,7 +70,7 @@ Vue.component('line-chart', {
           ]
         },
         {
-          label: 'totale_attualmente_positivi',
+          label: 'Current positive',
           backgroundColor: '#7ecb7a',
           data: [
             221, 311, 385, 588, 821, 1049,
@@ -106,6 +106,71 @@ var vm = new Vue({
   el: '.app_Chart',
   data: {
     message: 'Increase in cases-Italy(1)'
+  }
+})
+
+//Gaza work
+//this is the tracking for Gaza
+Vue.component('line-chart', {
+  extends: VueChartJs.Line,
+  mounted() {
+    this.renderChart({
+      labels: [
+        '27/8', '28', '29', '31', '01/09', '02',
+        '03', '04', '05', '06', '07',
+      ],
+      datasets: [
+        
+        {
+          label: 'Deaths',
+          backgroundColor: '#5fb58a',
+          data: [
+            3,3,3,4,5,5,5,5,5,7,8
+
+          ]
+        },
+        {
+          label: 'Recovered cases',
+          backgroundColor: '#70c082',
+          data: [
+            72,72,72,72,76,76,76,89,89,89,89,
+
+          ]
+        },
+        
+        {
+          label: 'Current positive',
+          backgroundColor: '#7ecb7a',
+          data: [
+            117,146,182,280,319,402,500,603,713,873,1054
+
+          ]
+        },
+        {
+          label: 'Total cases',
+          backgroundColor: '#8bd670',
+          data: [
+            192,221,257,356,400,483,581,697,807,969,1151
+          ]
+        },
+        {
+          label: 'Daily infection',
+          backgroundColor: '#70c082',
+          data: [
+            77,31,36,69,44,84,98,116,110,162,182
+
+          ]
+        },
+      ]
+    }, { responsive: true, maintainAspectRatio: false })
+  }
+
+})
+
+var vm = new Vue({
+  el: '.app_Chart_gaza',
+  data: {
+    message: 'Cases in Gaza'
   }
 })
 
