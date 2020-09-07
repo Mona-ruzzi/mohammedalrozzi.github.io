@@ -1,4 +1,5 @@
 data,stato,new_cases_d,Tatal_cases_A,Active_cases_A,Local_Active_cases_A,Imported_Active_cases,Recovered_Cases_A,Death_D,Death_A,tests_A
+2020-09-04T10:15:00,PS,116,697,603,577,26,89,,5,1578
 2020-09-05T10:00:00,PS,110,807,713,687,26,89,,5,1562
 2020-09-06T10:25:00,PS,162,969,873,843,30,89,,7,1266
 2020-09-07T10:00:00,PS,182,1151,1054,1024,30,89,,8,1857
