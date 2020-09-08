@@ -117,7 +117,7 @@ Vue.component('line-chart', {
     this.renderChart({
       labels: [
         '27/8', '28', '29', '31', '01/09', '02',
-        '03', '04', '05', '06', '07',
+        '03', '04', '05', '06', '07','08'
       ],
       datasets: [
         
@@ -125,7 +125,7 @@ Vue.component('line-chart', {
           label: 'Deaths',
           backgroundColor: '#5fb58a',
           data: [
-            3,3,3,4,5,5,5,5,5,7,8
+            3,3,3,4,5,5,5,5,5,7,8,9
 
           ]
         },
@@ -133,7 +133,7 @@ Vue.component('line-chart', {
           label: 'Recovered cases',
           backgroundColor: '#70c082',
           data: [
-            72,72,72,72,76,76,76,89,89,89,89,
+            72,72,72,72,76,76,76,89,89,89,89,89,
 
           ]
         },
@@ -142,7 +142,7 @@ Vue.component('line-chart', {
           label: 'Current positive',
           backgroundColor: '#7ecb7a',
           data: [
-            117,146,182,280,319,402,500,603,713,873,1054
+            117,146,182,280,319,402,500,603,713,873,1054,1171,
 
           ]
         },
@@ -150,14 +150,14 @@ Vue.component('line-chart', {
           label: 'Total cases',
           backgroundColor: '#8bd670',
           data: [
-            192,221,257,356,400,483,581,697,807,969,1151
+            192,221,257,356,400,483,581,697,807,969,1151,1269
           ]
         },
         {
           label: 'Daily infection',
           backgroundColor: '#70c082',
           data: [
-            77,31,36,69,44,84,98,116,110,162,182
+            77,31,36,69,44,84,98,116,110,162,182,118
 
           ]
         },
