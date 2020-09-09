@@ -117,7 +117,7 @@ Vue.component('line-chart', {
     this.renderChart({
       labels: [
         '27/8', '28', '29', '31', '01/09', '02',
-        '03', '04', '05', '06', '07','08'
+        '03', '04', '05', '06', '07','08','09'
       ],
       datasets: [
         
@@ -125,7 +125,7 @@ Vue.component('line-chart', {
           label: 'Deaths',
           backgroundColor: '#5fb58a',
           data: [
-            3,3,3,4,5,5,5,5,5,7,8,9
+            3,3,3,4,5,5,5,5,5,7,8,9,9
 
           ]
         },
@@ -157,7 +157,15 @@ Vue.component('line-chart', {
           label: 'Daily infection',
           backgroundColor: '#70c082',
           data: [
-            77,31,36,69,44,84,98,116,110,162,182,118
+            77,31,36,69,44,84,98,116,110,162,182,118,98
+
+          ]
+        },
+        {
+          label: 'Daily tests',
+          backgroundColor: '#70c082',
+          data: [
+            77, 31, 36, 69, 44, 84, 98, 116, 110, 162, 182, 118
 
           ]
         },
