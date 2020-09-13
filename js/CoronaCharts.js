@@ -153,19 +153,44 @@ Vue.component('line-chart', {
             192,221,257,356,400,483,581,697,807,969,1151,1269,1356,1551,1631,1719,1819
           ]
         },
+        
+      ]
+    }, { responsive: true, maintainAspectRatio: false })
+  }
+
+})
+
+var vm = new Vue({
+  el: '.app_Chart_gaza',
+  data: {
+    message: 'Cases in Gaza Accumulative'
+  }
+})
+
+
+Vue.component('line-chart', {
+  extends: VueChartJs.Bar,
+  mounted() {
+    this.renderChart({
+      labels: [
+        '27/8', '28', '29', '31', '01/09', '02',
+        '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'
+      ],
+      datasets: [
+
         {
           label: 'Daily infection',
           backgroundColor: '#70c082',
           data: [
-            77,31,36,69,44,84,98,116,110,162,182,118,87,195,80,88,100
+            77, 31, 36, 69, 44, 84, 98, 116, 110, 162, 182, 118, 87, 195, 80, 88, 100
 
           ]
         },
         {
           label: 'Daily tests',
-          backgroundColor: '#70c082',
+          backgroundColor: '#5fb58a',
           data: [
-            , , , 670,1078 ,1281 ,1421 ,1578 ,1562 ,1266 ,1857 , 1464,1587, 1906,1813,1707,1417
+            , , , 670, 1078, 1281, 1421, 1578, 1562, 1266, 1857, 1464, 1587, 1906, 1813, 1707, 1417
 
           ]
         },
@@ -176,12 +201,11 @@ Vue.component('line-chart', {
 })
 
 var vm = new Vue({
-  el: '.app_Chart_gaza',
+  el: '.app_Chart_gaza_2',
   data: {
     message: 'Cases in Gaza'
   }
 })
-
 //this is the tracking for Spain
 Vue.component('line-chart', {
   extends: VueChartJs.Line,
