@@ -180,7 +180,7 @@ Vue.component('line-chart', {
 
         {
           label: 'Daily infection',
-          backgroundColor: '#70c082',
+          backgroundColor: '#8bd670',
           data: [
             77, 31, 36, 69, 44, 84, 98, 116, 110, 162, 182, 118, 87, 195, 80, 88, 100,108,79,94
 
