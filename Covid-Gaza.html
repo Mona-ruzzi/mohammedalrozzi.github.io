@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
+    <title>personalized corona tracking</title>
+    <script type="text/javascript" src="./js/station-clock.js"></script>
+    <script src="https://kit.fontawesome.com/d41a2ff516.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+      integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/zok6cds.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    </head>
+  <body>
+    <div style="text-align: center;">
+      <h1 style="color: #34495e;">Gaza Statistics- Covid-19</h1>
+    </div>
+
+    
+
+
+  <div id="app365" style="text-align: center;">
+    <button class="down-arrow" v-scroll-to="{ element: '#element', duration: 5000 }">▼</button>
+  </div>
+  <div style="color: chocolate;">
+    <p style="margin-left: 50px; text-align: left; font-size: 12px; font-weight: lighter;" id="welcomemessage">Today is:
+      {{ welcome_date }} and the local time is:
+      {{ welcome_time }}</p>
+  </div>
+<div style="text-align: center;display: none;">
+  <i class="fas fa-chart-line"></i>
+</div>
+
+<div style="width: 80%;padding-left: 10%;">
+<div class="app_Chart_gaza" id="heading_chart">
+  {{ message }}
+  <p></p>
+  <line-chart></line-chart>
+</div>
+<div>
+  <p class="tra"></p>
+</div>
+<div class="app_Chart_gaza_2" id="heading_chart">
+  {{ message }}
+  <p></p>
+  <line-chart></line-chart>
+</div>
+</div>
+
+<div style="display: none;">
+<div class="center" style="text-align: left; font-size: smaller; font-family: roboto; color:#34495e">
+          <p class="tra"></p>  
+          <ol id="endnotes">
+              <li v-for="item in items" :key="item.message">
+                {{ item.message }}
+              </li>
+              <li>click <a href="https://mohammedalrozzi.github.io">here</a> for an updated version of this page</li>
+            </ol>
+</div>
+</div>
+
+
+
+<div>
+<p class="last_line" style="float: right; margin-right: 50px;" id="welcomemessage">Made with <i class="fas fa-heart"
+    style="color: red; font-size: 12px;"></i> by Mohammed Alrozzi using <i class="fab fa-vuejs"style="font-size:12px"></i></p>
+</div>
+
+<!--a seperator:
+
+<hr class="style-eight"> -->
+  <!-- partial -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./js/ghost.js"></script>
+    <script src="./js/axioscalls.js"></script>
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+    <script src="./js/CoronaCharts.js"></script>
+    <script src="./js/swisswatch.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+    <div id="app365">
+      <h1 id="element"></h1>
+    </div>
+      
+    <script>
+      new Vue({
+          el: '#app365',
+          methods: {
+          }
+        })
+    </script>
+</body>
+<footer>
+
+
+</footer>
+</html>
