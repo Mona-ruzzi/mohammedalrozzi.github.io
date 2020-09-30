@@ -126,7 +126,7 @@ Vue.component('line-chart', {
         
         {
           label: 'Deaths',
-          backgroundColor: '#5fb58a',
+          backgroundColor: '#405fb58a',
           data: [
             3,3,3,4,5,5,5,
             5,5,7,8,9,9,10,
@@ -138,7 +138,7 @@ Vue.component('line-chart', {
         },
         {
           label: 'Recovered cases',
-          backgroundColor: '#70c082',
+          backgroundColor: '#4070c082',
           data: [
             72,72,72,72,76,76,76,
             89,89,89,89,89,114,114,
@@ -151,7 +151,7 @@ Vue.component('line-chart', {
         
         {
           label: 'Current positive',
-          backgroundColor: '#7ecb7a',
+          backgroundColor: '#407ecb7a',
           data: [
             117,146,182,280,319,402,500,
             603,713,873,1054,1171,1233,1427,
@@ -163,7 +163,7 @@ Vue.component('line-chart', {
         },
         {
           label: 'Total cases',
-          backgroundColor: '#8bd670',
+          backgroundColor: '#408bd670',
           data: [
             192,221,257,356,400,483,581,
             697,807,969,1151,1269,1356,1551,
