@@ -5,6 +5,7 @@ new Vue({
         tags: ['Date', 'Region', 'Daily infection', 'Accum. infection', 'Death_daily', 'Death_total', 'Daily Recovered', 'Total Recovered',
             'Active cases', 'Test_daily', 'Test Accumulative'],
         info_general: {
+            Oct02: ['02-10-2020', 'Gaza', 109, 3184, 0, 22, 110, 1756, 1397, 1905,1905+ 2057 + 1457 + 53130,],
             Oct01: ['01-10-2020', 'Gaza', 127, 3075, 1, 22, 60, 1655, 1398, 2057, 2057+1457 + 53130,],
             Sep30: ['30-09-2020', 'Gaza', 37, 2948, 0, 21, 125, 1595, 1332, 1457, 1457 + 53130,],
             Sep29: ['29-09-2020', 'Gaza', 85, 2911, 0, 21, 150, 1470, 1420, 2028, 2028 + 1810 + 2243 + 2073 + 682 + 2035 + 2099 + 33602 + 1948 + 4610,],
