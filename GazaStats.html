@@ -60,12 +60,15 @@
 
 
 
-<div  style="padding-left: 10%;" id="table">
+<div  style="width:70%; padding-left: 10%;" id="table">
   <p>{{ message }}</p>
   <p></p>
   <table style="width:90%;border: 1px solid black;">
     <tr style="border: 1px solid black;">
       <th style="border: 1px solid black;padding: 5px;background-color: gainsboro;" v-for="tag in tags">{{ tag }}</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct03">{{ info }}</td>
     </tr>
     <tr>
       <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct02">{{ info }}</td>
