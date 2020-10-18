@@ -59,181 +59,243 @@
 </div>
 
 
+<section id='table'>
+  <div id="table">
+    <p>{{ message }}</p>
+    <p></p>
+  </div>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0" class="tblbkg">
+      <tr >
+        <th v-for="tag in tags">{{ tag }}</th>
+      </tr>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0" class="tblbkg">
+      <tr>
+        <td   v-for="info in info_general.Octxx">{{ info }}</td>
+      </tr>
+      <tr>
+        <td   v-for="info in info_general.Oct17">{{ info }}</td>
+      </tr>
+      <tr>
+        <td   v-for="info in info_general.Oct16">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct15">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct14">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct13">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct12">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct11">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct10">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct09">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct08">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct07">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct06">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct05">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct04">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct03">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct02">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Oct01">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep30">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep29">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep28">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep27">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep26">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep25">{{ info }}</td>
+    </tr>
+    <tr>
+      <td   v-for="info in info_general.Sep24">{{ info }}</td>
+    </tr>
 
-<div  style="width:70%; padding-left: 10%;" id="table">
-  <p>{{ message }}</p>
-  <p></p>
-  <table style="width:90%;border: 1px solid black;">
-    <tr style="border: 1px solid black;">
-      <th style="border: 1px solid black;padding: 5px;background-color: gainsboro;" v-for="tag in tags">{{ tag }}</th>
+    <tr>
+      <td   v-for="info in info_general.Sep23">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Octxx">{{ info }}</td>
+      <td   v-for="info in info_general.Sep22">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct17">{{ info }}</td>
+      <td   v-for="info in info_general.Sep21">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct16">{{ info }}</td>
+      <td   v-for="info in info_general.Sep20">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct15">{{ info }}</td>
+      <td   v-for="info in info_general.Sep19">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct14">{{ info }}</td>
+      <td   v-for="info in info_general.Sep18">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct13">{{ info }}</td>
+      <td   v-for="info in info_general.Sep17">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct12">{{ info }}</td>
+      <td   v-for="info in info_general.Sep16">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct11">{{ info }}</td>
+      <td   v-for="info in info_general.Sep15">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct10">{{ info }}</td>
+      <td   v-for="info in info_general.Sep14">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct09">{{ info }}</td>
+      <td   v-for="info in info_general.Sep13">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct08">{{ info }}</td>
+      <td   v-for="info in info_general.Sep12">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct07">{{ info }}</td>
+      <td   v-for="info in info_general.Sep11">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct06">{{ info }}</td>
+      <td   v-for="info in info_general.Sep10">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct05">{{ info }}</td>
+      <td   v-for="info in info_general.Sep09">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct04">{{ info }}</td>
+      <td   v-for="info in info_general.Sep08">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct03">{{ info }}</td>
+      <td   v-for="info in info_general.Sep07">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct02">{{ info }}</td>
+      <td   v-for="info in info_general.Sep06">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Oct01">{{ info }}</td>
+      <td   v-for="info in info_general.Sep05">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep30">{{ info }}</td>
+      <td   v-for="info in info_general.Sep04">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep29">{{ info }}</td>
+      <td   v-for="info in info_general.Sep03">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep28">{{ info }}</td>
+      <td   v-for="info in info_general.Sep02">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep27">{{ info }}</td>
+      <td   v-for="info in info_general.Sep01">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep26">{{ info }}</td>
+      <td   v-for="info in info_general.Aug31">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep25">{{ info }}</td>
+      <td   v-for="info in info_general.Aug30">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep24">{{ info }}</td>
-    </tr>
-
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep23">{{ info }}</td>
+      <td   v-for="info in info_general.Aug29">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep22">{{ info }}</td>
+      <td v-for="info in info_general.Aug28">{{ info }}</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep21">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep20">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep19">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep18">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep17">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep16">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep15">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep14">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep13">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep12">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep11">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep10">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep09">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep08">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep07">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep06">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep05">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep04">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep03">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep02">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Sep01">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Aug31">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Aug30">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Aug29">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Aug28">{{ info }}</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black;padding-left: 10px;" v-for="info in info_general.Aug27">{{ info }}</td>
+      <td v-for="info in info_general.Aug27">{{ info }}</td>
     </tr>
   
   </table>
   <p class="tra"></p>
 </div>
+</section>
   
+<style>
+  table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
 
 
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+.tblbkg{
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+
+}
+section{
+  margin: 50px;
+
+}
+
+</style>
+
+<script>
+  // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+    $(window).on("load resize ", function () {
+      var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+      $('.tbl-header').css({ 'padding-right': scrollWidth });
+    }).resize();
+</script>
 <div>
 <p class="last_line" style="float: right; margin-right: 50px;" id="welcomemessage"> Mohammed Alrozzi <i class="fab fa-vuejs"style="font-size:12px"></i></p>
 </div>
