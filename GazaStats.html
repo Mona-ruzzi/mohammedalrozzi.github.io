@@ -20,6 +20,8 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
     </head>
     
   <body style="background-color: #fff1e0;">
@@ -59,7 +61,7 @@
 </div>
 
 
-<section id='table'>
+<section style="width:70%;padding-left: 10%;" id='table'>
   <div id="table">
     <p>{{ message }}</p>
     <p></p>
@@ -292,13 +294,13 @@
     </tr>
   
   </table>
-  <p class="tra"></p>
 </div>
+<p class="tra"></p>
 </section>
-  
+
 <style>
   table{
-  width:100%;
+  width: 100%;
   table-layout: fixed;
 }
 .tbl-header{
@@ -353,6 +355,7 @@ section{
       $('.tbl-header').css({ 'padding-right': scrollWidth });
     }).resize();
 </script>
+<div id="updates"></div>
 <div>
 <p class="last_line" style="float: right; margin-right: 50px;" id="welcomemessage"> Mohammed Alrozzi <i class="fab fa-vuejs"style="font-size:12px"></i></p>
 </div>
@@ -383,6 +386,35 @@ section{
         })
 
     </script>
+  
+<!--the d3 code-->
+  <script>
+    d3.select('h1')
+      .style('color','black');
+    d3.select('#table')
+      .style('color', 'chocolate');
+    d3.selectAll('#heading_chart')
+      .style('color', 'chocolate');
+    d3.selectAll('th')
+      .style('color', 'Almond');
+    d3.select('#shit')
+      .remove();
+    d3.select('#updates')
+      .append('div')
+      .insert('p')
+      .text('i love you mo')
+      .attr('id','newid');
+    d3.select('#newid')
+      .style('color','chocolate');
+    d3.select('#updates')
+      .append('p')
+      .text('this is a new text');
+    d3.select('#updates')
+      .remove();
+
+
+
+  </script>
 </body>
 <footer>
 
