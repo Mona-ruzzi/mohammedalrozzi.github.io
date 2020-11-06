@@ -148,7 +148,8 @@ Vue.component('line-chart', {
             37
 
 
-          ]
+          ],
+          order:1
         },
         {
           label: 'Recovered cases',
@@ -167,7 +168,8 @@ Vue.component('line-chart', {
             5074,
 
 
-          ]
+          ],
+          order:2
         },
         
         {
@@ -187,7 +189,9 @@ Vue.component('line-chart', {
             2908
 
 
-          ]
+          ],
+          fill:true,
+          order:4
         },
         {
           label: 'Total cases',
@@ -205,7 +209,9 @@ Vue.component('line-chart', {
             6347,6545,6730,7002,7231,7512,7760,
             8019
 
-          ]
+          ],
+          fill: true,
+          order:3
         },
         
       ]
@@ -240,11 +246,10 @@ Vue.component('line-chart', {
         '06'
 
       ],
-      datasets: [
-
-        {
+      datasets: [{
           label: 'Daily infection',
-          backgroundColor: '#8bd670',
+          backgroundColor: 'grey',
+          borderColor:'black',
           data: [
             77, 31, 36, 69, 44, 84, 98,
              116, 110, 162, 182, 118, 87, 195, 
@@ -257,9 +262,10 @@ Vue.component('line-chart', {
             96,156,111,152,199,100,276,
             178,198,185,272,229,281,248,
             259
-
-
-          ]
+          ],
+          type:'line',
+          fill:false,
+          order:1
         },
         {
           label: 'Daily tests',
@@ -278,7 +284,8 @@ Vue.component('line-chart', {
             2562
 
 
-          ]
+          ],
+          order:2
         },
       ]
     }, { responsive: true, maintainAspectRatio: false })
