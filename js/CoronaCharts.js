@@ -299,6 +299,92 @@ var vm = new Vue({
     message: 'Cases in Gaza'
   }
 })
+//this is a new one about average weekly infection
+
+
+Vue.component('line-chart', {
+  extends: VueChartJs.Bar,
+  mounted() {
+    this.renderChart({
+      labels: [
+        '27/8-03/09',
+        '04-10/09',
+        '11-17',
+        '18-24',
+        '25-01/10',
+        '02-08',
+        '09-15',
+        '16-22',
+        '23-29',
+        '30/10-05/11',
+        '06-12'
+
+      ],
+      datasets: [{
+        label: 'weekly average infection',
+        backgroundColor: 'grey',
+        borderColor: 'black',
+        data: [
+          (77+31+36+69+44+84+98)/7,
+          (116+110+162+182+118+87+195)/7,
+          (80+ 88+100+108+ 79+94+76)/7,
+          (47+ 90+ 45+ 42+45+ 73+ 95)/7,
+          (45+ 67+ 66+ 35+ 85+ 37+127)/7,
+          (109+ 114+ 56+ 73+ 146+ 127+ 51)/7,
+          (88+ 58+ 87+ 118+ 73+ 110+ 81)/7,
+          (74+ 86+ 119+ 77+ 99+ 134+ 124)/7,
+          (96+ 156+ 111+ 152+ 199+ 100+ 276)/7,
+          (178+ 198+ 185+ 272+ 229+ 281+248)/7,
+          (259+250)/2
+        ],
+        type: 'line',
+        fill: false,
+        order: 1,
+        
+      },
+      
+      ]
+    }, {
+      responsive: true, 
+      maintainAspectRatio: false, 
+      scales: {
+        yAxes: [{
+          id: 'y-axis-0',
+          gridLines: {
+            display: true,
+            lineWidth: 1,
+            color: "rgba(0,0,0,0.30)"
+          },
+          ticks: {
+            beginAtZero: true,
+            mirror: false,
+            suggestedMin: 0,
+            suggestedMax: 400,
+          },
+          afterBuildTicks: function (chart) {
+
+          }
+        }],
+        xAxes: [{
+          id: 'x-axis-0',
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      } })
+  }
+
+})
+
+var vm = new Vue({
+  el: '.app_Chart_gaza_3',
+  data: {
+    message: 'Weekly average of infection in Gaza'
+  }
+})
 //this is the tracking for Spain
 Vue.component('line-chart', {
   extends: VueChartJs.Line,
