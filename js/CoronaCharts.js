@@ -318,7 +318,6 @@ Vue.component('line-chart', {
         '23-29',
         '30/10-05/11',
         '06-12'
-
       ],
       datasets: [{
         label: 'weekly average infection',
@@ -342,7 +341,7 @@ Vue.component('line-chart', {
         order: 1,
         
       },
-      
+        
       ]
     }, {
       responsive: true, 
@@ -359,7 +358,6 @@ Vue.component('line-chart', {
             beginAtZero: true,
             mirror: false,
             suggestedMin: 0,
-            suggestedMax: 400,
           },
           afterBuildTicks: function (chart) {
 
@@ -371,7 +369,7 @@ Vue.component('line-chart', {
             display: false
           },
           ticks: {
-            beginAtZero: true
+            beginAtZero: false
           }
         }]
       } })
@@ -383,6 +381,79 @@ var vm = new Vue({
   el: '.app_Chart_gaza_3',
   data: {
     message: 'Weekly average of infection in Gaza'
+  }
+})
+// this is for two week average in Gaza
+Vue.component('line-chart', {
+  extends: VueChartJs.Bar,
+  mounted() {
+    this.renderChart({
+      labels: [
+        '27/8-10/09',
+        '11-24',
+        '25-08/10',
+        '09-22',
+        '23/10-05/11',
+        '06-19/11'
+      ],
+      datasets: [{
+        label: 'weekly average infection',
+        backgroundColor: 'grey',
+        borderColor: 'black',
+        data: [
+          (77 + 31 + 36 + 69 + 44 + 84 + 98+116 + 110 + 162 + 182 + 118 + 87 + 195) / 14,
+          (80 + 88 + 100 + 108 + 79 + 94 + 76+47 + 90 + 45 + 42 + 45 + 73 + 95) / 14,
+          (45 + 67 + 66 + 35 + 85 + 37 + 127+109 + 114 + 56 + 73 + 146 + 127 + 51) / 14,
+          (88 + 58 + 87 + 118 + 73 + 110 + 81+74 + 86 + 119 + 77 + 99 + 134 + 124) / 14,
+          (96 + 156 + 111 + 152 + 199 + 100 + 276+178 + 198 + 185 + 272 + 229 + 281 + 248) / 14,
+          (259 + 250) / 2
+        ],
+        type: 'line',
+        fill: false,
+        order: 1,
+
+      },
+
+      ]
+    }, {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          id: 'y-axis-0',
+          gridLines: {
+            display: true,
+            lineWidth: 1,
+            color: "rgba(0,0,0,0.30)"
+          },
+          ticks: {
+            beginAtZero: true,
+            mirror: false,
+            suggestedMin: 0,
+          },
+          afterBuildTicks: function (chart) {
+
+          }
+        }],
+        xAxes: [{
+          id: 'x-axis-0',
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            beginAtZero: false
+          }
+        }]
+      }
+    })
+  }
+
+})
+
+var vm = new Vue({
+  el: '.app_Chart_gaza_4',
+  data: {
+    message: '2-week average of infection in Gaza'
   }
 })
 //this is the tracking for Spain
