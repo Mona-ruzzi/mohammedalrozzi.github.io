@@ -70,7 +70,17 @@
     <line-chart></line-chart>
   </div>
 </div>
-
+<div class="grid" style="display: none;">
+  <div class="card"><p>hi hi hi </p></div>
+    <div class="card">
+      <p>hi hi hi </p>
+    </div>
+  <div class="card">
+    <h3>ffdfd ffdfds</h3>
+    <p>hi hi hi </p>
+    <a href="hhhdfsdfdfs.">dfsdds</a>
+  </div>
+</div>
 
 <section style="width:70%;padding-left: 10%;" id='table'>
   <div id="table">
@@ -86,6 +96,9 @@
   </div>
   <div class="tbl-content">
     <table cellpadding="0" cellspacing="0" border="0" class="tblbkg">
+      <tr>
+        <td v-for="info in info_general.Nov08">{{ info }}</td>
+      </tr>
       <tr>
         <td v-for="info in info_general.Nov07">{{ info }}</td>
       </tr>
@@ -311,21 +324,6 @@
 </div>
 <p class="tra"></p>
 </section>
-<div class="container2">
-  <div class="grid">
-    <div class="card">
-      <p>chec 1</p>
-
-    </div>
-    <div class="card">
-      <p>chec 1</p>
-    
-    </div>
-    <div class="card">
-    <p>check check</p>
-    </div>
-  </div>
-</div>
 <style>
   table{
   width: 100%;
