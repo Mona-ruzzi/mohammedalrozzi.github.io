@@ -67,6 +67,11 @@
       and tests because no tests were administered for the lack
       of testing kits.</p>
   </div>
+    <div class="app_Chart_gaza_5" id="heading_chart">
+      {{ message }}
+      <p></p>
+      <line-chart></line-chart>
+    </div>
 </div>
 <div class="grid" style="display: none;">
   <div class="card"><p>hi hi hi </p></div>
@@ -1065,6 +1070,82 @@
       message: '2-week average of infection in Gaza'
     }
   })
+  // this is for three week average in Gaza
+    Vue.component('line-chart', {
+      extends: VueChartJs.Bar,
+      mounted() {
+        this.renderChart({
+          labels: [
+            '27/8-16/09',
+            '17/09-7/10',
+            '8-28/10',
+            '29/10-18/11',
+            '19/11-9/12',
+            '10-31/12',
+      
+          ],
+          datasets: [{
+            label: '3 week average infection',
+            backgroundColor: 'grey',
+            borderColor: 'black',
+            data: [
+              (77 + 31 + 36 + 69 + 44 + 84 + 98 + 116 + 110 + 162 + 182 + 118 + 87 + 195+ 80 + 88 + 100 + 108 + 79 + 94 + 76) / 21,
+              (47 + 90 + 45 + 42 + 45 + 73 + 95+45 + 67 + 66 + 35 + 85 + 37 + 127 + 109 + 114 + 56 + 73 + 146 + 127 + 51) / 21,
+              (88 + 58 + 87 + 118 + 73 + 110 + 81 + 74 + 86 + 119 + 77 + 99 + 134 + 124+ 96 + 156 + 111 + 152 + 199 + 100 + 276) / 21,
+              (178 + 198 + 185 + 272 + 229 + 281 + 248+ 259 + 250 + 201 + 270 + 191 + 300 + 311 + 274 + 310 + 406 + 453 + 486 + 600 + 345) / 21,
+              (754 + 891 + 684 + 689 + 685 + 613 + 656 + 922 + 827 + 738 + 748 + 815 + 735 + 827+ 788 + 584 + 726 + 471 + 0 + 639 + 586) / 20,
+              (617 + 505 + 406 + 157 + 709 + 935 + 1015+ 997 + 876 + 560 + 280 + 516) / 12,
+
+
+            ],
+            type: 'line',
+            fill: false,
+            order: 1,
+
+          },
+
+          ]
+        }, {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              id: 'y-axis-0',
+              gridLines: {
+                display: true,
+                lineWidth: 1,
+                color: "rgba(0,0,0,0.30)"
+              },
+              ticks: {
+                beginAtZero: true,
+                mirror: false,
+                suggestedMin: 0,
+              },
+              afterBuildTicks: function (chart) {
+
+              }
+            }],
+            xAxes: [{
+              id: 'x-axis-0',
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          }
+        })
+      }
+
+    })
+
+    var vm = new Vue({
+      el: '.app_Chart_gaza_5',
+      data: {
+        message: '3-week average of infection in Gaza'
+      }
+    })
 </script>
   
   
