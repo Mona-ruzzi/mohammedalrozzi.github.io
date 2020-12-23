@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="//unpkg.com/element-plus/lib/index.full.js"></script>
+
+</head>
+<body>
+<script src="//unpkg.com/element-plus/lib/index.full.js"></script>
+<div id="app">
+    <div class="block">
+        <el-timeline>
+            <el-timeline-item v-for="(activity, index) in activities" :key="index" :timestamp="activity.timestamp">
+                {{activity.content}}
+            </el-timeline-item>
+        </el-timeline>
+    </div>
+</div>
+<script>
+    var Main = {
+            data() {
+                return {
+                    activities: [{
+                        content: 'circulation in community',
+                        timestamp: '2020-08-23'
+                    }, {
+                        content: 'First lockdown',
+                        timestamp: '2020-04-13'
+                    }, {
+                        content: 'Success',
+                        timestamp: '2018-04-11'
+                    }, {
+                            content: 'Approved',
+                            timestamp: '2018-04-13'
+                        },]
+                };
+            }
+        };
+        ; const app = Vue.createApp(Main);
+        app.use(ElementPlus);
+        app.mount("#app")
+</script>
+<style>
+    @import url("//unpkg.com/element-plus/lib/theme-chalk/index.css");
+    #app{
+        display: flex;
+        color: blue;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+</style>
+</body>
+</html>
