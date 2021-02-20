@@ -59,6 +59,11 @@
 <div>
   <p class="tra"></p>
 </div>
+<div class="app_Chart_gaza2021" id="heading_chart">
+  {{ message }}
+  <p></p>
+  <line-chart></line-chart>
+</div>
 <div class="app_Chart_gaza_2" id="heading_chart">
   {{ message }}
   <p></p>
@@ -926,34 +931,32 @@
     mounted() {
       this.renderChart({
         labels: [
-          '27/08', '28/08', '29/08', '31/08', '01/09', '02/09', '03/09',
-          '04/09', '05/09', '06/09', '07/09', '08/09', '09/09', '10/09',
-          '11/09', '12/09', '13/09', '14/09', '15/09', '16/09', '17/09',
-          '18/09', '19/09', '20/09', '21/09', '22/09', '23/09', '24/09',
-          '25/09', '26/09', '27/09', '28/09', '29/09', '30/09', '01/10',
-          '02/10', '03/10', '04/10', '05/10', '06/10', '07/10', '08/10',
-          '09/10', '10/10', '11/10', '12/10', '13/10', '14/10', '15/10',
-          '16/10', '17/10', '18/10', '19/10', '20/10', '21/10', '22/10',
-          '23/10', '24/10', '25/10', '26/10', '27/10', '28/10', '29/10',
-          '30/10', '31/10', '01/11', '02/11', '03/11', '04/11', '05/11',
-          '06/11', '07/11', '08/11', '09/11', '10/11', '11/11', '12/11',
-          '13/11', '14/11', '15/11', '16/11', '17/11', '18/11', '19/11',
-          '20/11', '21/11', '22/11', '23/11', '24/11', '25/11', '26/11',
-          '27/11', '28/11', '29/11', '30/11', '01/12', '02/12', '03/12',
-          '04/12', '05/12', '06/12', '07/12', '08/12', '09/12', '10/12',
-          '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12',
-          '18/12', '19/12', '20/12', '21/12', '22/12', '23/12', '24/12',
-          '25/12', '26/12', '27/12', '28/12', '29/12', '30/12', '31/12',
-          '01/01','02/01','03/01', '04/01', '05/01', '06/01', '07/01', 
-          '08/01','09/01', '10/01', '11/01', '12/01', '13/01', '14/01',
-          '15/01','16/01', '17/01', '18/01', '19/01', '20/01', '21/01', 
-          '22/01','23/01', '24/01', '25/01','26/01','27/01','28/01',
-          '29/01','30/01','31/01','01/02','02/02','03/02','04/02',
-          '05/02','06/02','07/02','08/02','09/02','10/02','11/02',
-          '12/02','13/02','14/02','15/02','16/02','17/02','18/02',
-          '19/02','20/02'
-
-
+       '27;August;20', '28;August;20', '29;August;20', '31;August;20', '01;September;20', '02;September;20', '03;September;20',
+          '04;September;20', '05;September;20', '06;September;20', '07;September;20', '08;September;20', '09;September;20', '10;September;20',
+          '11;September;20', '12;September;20', '13;September;20', '14;September;20', '15;September;20', '16;September;20', '17;September;20',
+          '18;September;20', '19;September;20', '20;September;20', '21;September;20', '22;September;20', '23;September;20', '24;September;20',
+          '25;September;20', '26;September;20', '27;September;20', '28;September;20', '29;September;20', '30;September;20', '01;October;20',
+          '02;October;20', '03;October;20', '04;October;20', '05;October;20', '06;October;20', '07;October;20', '08;October;20',
+          '09;October;20', '10;October;20', '11;October;20', '12;October;20', '13;October;20', '14;October;20', '15;October;20',
+          '16;October;20', '17;October;20', '18;October;20', '19;October;20', '20;October;20', '21;October;20', '22;October;20',
+          '23;October;20', '24;October;20', '25;October;20', '26;October;20', '27;October;20', '28;October;20', '29;October;20',
+          '30;October;20', '31;October;20;October20', '01;November;20', '02;November;20', '03;November;20', '04;November;20', '05;November;20',
+          '06;November;20', '07;November;20', '08;November;20', '09;November;20', '10;November;20', '11;November;20', '12;November;20',
+          '13;November;20', '14;November;20', '15;November;20', '16;November;20', '17;November;20', '18;November;20', '19;November;20',
+          '20;November;20', '21;November;20', '22;November;20', '23;November;20', '24;November;20', '25;November;20', '26;November;20',
+          '27;November;20', '28;November;20', '29;November;20', '30;November;20', '01;December;20', '02;December;20', '03;December;20',
+          '04;December;20', '05;December;20', '06;December;20', '07;December;20', '08;December;20', '09;December;20', '10;December;20',
+          '11;December;20', '12;December;20', '13;December;20', '14;December;20', '15;December;20', '16;December;20', '17;December;20',
+          '18;December;20', '19;December;20', '20;December;20', '21;December;20', '22;December;20', '23;December;20', '24;December;20',
+          '25;December;20', '26;December;20', '27;December;20', '28;December;20', '29;December;20', '30;December;20', '31;December;20',
+          '01;January;21', '02;January;21', '03;January;21', '04;January;21', '05;January;21', '06;January;21', '07;January;21',
+          '08;January;21', '09;January;21', '10;January;21', '11;January;21', '12;January;21', '13;January;21', '14;January;21',
+          '15;January;21', '16;January;21', '17;January;21', '18;January;21', '19;January;21', '20;January;21', '21;January;21',
+          '22;January;21', '23;January;21', '24;January;21', '25;January;21', '26;January;21', '27;January;21', '28;January;21',
+          '29;January;21', '30;January;21', '31;January;21', '01;February;21', '02;February;21', '03;February;21', '04;February;21',
+          '05;February;21', '06;February;21', '07;February;21', '08;February;21', '09;February;21', '10;February;21', '11;February;21',
+          '12;February;21', '13;February;21', '14;February;21', '15;February;21', '16;February;21', '17;February;21', '18;February;21',
+          '19;February;21', '20;February;21'
         ],
         datasets: [
 
@@ -1101,7 +1104,62 @@
           },
 
         ]
-      }, { responsive: true, maintainAspectRatio: false })
+      }, { responsive: true, maintainAspectRatio: false,
+      scales: {
+            yAxes: [{
+              id: 'y-axis-0',
+              gridLines: {
+                display: true,
+                lineWidth: 1,
+                color: "rgba(0,0,0,0.30)"
+              },
+              ticks: {
+                beginAtZero: true,
+                mirror: false,
+                suggestedMin: 0,
+              },
+              afterBuildTicks: function (chart) {
+
+              }
+            }],
+            xAxes: [{
+              id: 'x-axis-0',
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                beginAtZero: false,
+                callback: function (label) {
+                  var date = label.split(";")[0];
+                  var month = label.split(";")[1];
+                  var year= label.split(";")[2]
+                  return date;
+                }
+              }
+            },
+            {
+              id: 'xAxis-2',
+              type: "category",
+              gridLines: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+              ticks: {
+                callback: function (label) {
+                  var date = label.split(";")[0];
+                  var month=label.split(";")[1];
+                  var year = label.split(";")[2];
+                  if (date === "01" || date === "13" || date === "07" || date === "10" || date === "23" || date === "08" || date === "25")
+              {
+                    return month+", "+year;
+                  }
+                else {
+                  return "";
+                }
+                }
+              }
+            }]
+          }
+      })
     }
 
   })
@@ -1113,7 +1171,166 @@
     }
   })
 
+  //Gaza work
+  //this is the tracking for Gaza
+  Vue.component('line-chart', {
+    extends: VueChartJs.Line,
+    mounted() {
+      this.renderChart({
+        labels: [
+         '01;January;21', '02;January;21', '03;January;21', '04;January;21', '05;January;21', '06;January;21', '07;January;21',
+          '08;January;21', '09;January;21', '10;January;21', '11;January;21', '12;January;21', '13;January;21', '14;January;21',
+          '15;January;21', '16;January;21', '17;January;21', '18;January;21', '19;January;21', '20;January;21', '21;January;21',
+          '22;January;21', '23;January;21', '24;January;21', '25;January;21', '26;January;21', '27;January;21', '28;January;21',
+          '29;January;21', '30;January;21', '31;January;21', '01;February;21', '02;February;21', '03;February;21', '04;February;21',
+          '05;February;21', '06;February;21', '07;February;21', '08;February;21', '09;February;21', '10;February;21', '11;February;21',
+          '12;February;21', '13;February;21', '14;February;21', '15;February;21', '16;February;21', '17;February;21', '18;February;21',
+          '19;February;21', '20;February;21'
+        ],
+        datasets: [
 
+          {
+            label: 'Deaths',
+            backgroundColor: '#405fb58a',
+            data: [
+           
+              375, 386, 393, 398, 404, 409, 416,
+              424, 433, 441, 447, 453, 462, 464,
+              474, 478, 484, 487, 493, 496, 497,
+              501, 507, 508, 508, 513, 515, 517,
+              520, 522, 522, 522, 523, 526, 527,
+              527, 527, 529, 529, 531, 532, 532,
+              533, 536, 537, 537, 538, 538, 538,
+              541, 543
+
+
+            ],
+            order: 1
+          },
+          {
+            label: 'Recovered cases',
+            backgroundColor: '#4070c082',
+            data: [
+             
+              31206, 31766, 32046, 32556, 33422, 34227, 34957,
+              35747, 36302, 36779, 37320, 38031, 38739, 39428,
+              40128, 40533, 40893, 41283, 41678, 42281, 42811,
+              43306, 43651, 43966, 44378, 44813, 45178, 45578,
+              45860, 46070, 46305, 46619, 46899, 47184, 47459,
+              47727, 47912, 48126, 48450, 48714, 49070, 49260,
+              49615, 49955, 50155, 50505, 50830, 50830 + 295, 51335,
+              51581, 51776
+
+
+            ],
+            order: 2
+          },
+
+          {
+            label: 'Current positive',
+            backgroundColor: '#407ecb7a',
+            data: [
+             
+              9683, 9816, 9938, 9784, 9308, 9108, 8906,
+              8607, 8390, 8137, 7907, 7603, 7323, 7000,
+              6693, 6568, 6414, 6258, 6170, 5849, 5604,
+              5380, 5297, 5170, 4984, 4722, 4682, 4544,
+              4616, 4595, 4485, 4386, 4248, 4138, 4062,
+              3973, 3960, 3888, 3620, 3502, 3344, 3356,
+              3117, 2949, 2822, 2551, 2350, 2208, 2168,
+              2058, 1951
+
+
+            ],
+            fill: true,
+            order: 4
+          },
+          {
+            label: 'Total cases',
+            backgroundColor: '#408bd670',
+            data: [
+   
+              41264, 41968, 42377, 42738, 43134, 43744, 44279,
+              44778, 45125, 45357, 45674, 46087, 46524, 46892,
+              47295, 47579, 47791, 48028, 48341, 48626, 48912,
+              49187, 49455, 49644, 49834, 50048, 50375, 50639,
+              50996, 51187, 51312, 51527, 51670, 51848, 52048,
+              52227, 52399, 52543, 52599, 52747, 52946, 53148,
+              53265, 53440, 53514, 53593, 53718, 53871, 54041,
+              54180, 54270
+
+            ],
+            fill: true,
+            order: 3
+          },
+
+        ]
+      }, {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          yAxes: [{
+            id: 'y-axis-0',
+            gridLines: {
+              display: true,
+              lineWidth: 1,
+              color: "rgba(0,0,0,0.30)"
+            },
+            ticks: {
+              beginAtZero: true,
+              mirror: false,
+              suggestedMin: 0,
+            },
+            afterBuildTicks: function (chart) {
+
+            }
+          }],
+          xAxes: [{
+            id: 'x-axis-0',
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              beginAtZero: false,
+              callback: function (label) {
+                var date = label.split(";")[0];
+                var month = label.split(";")[1];
+                var year = label.split(";")[2]
+                return date;
+              }
+            }
+          },
+          {
+            id: 'xAxis-2',
+            type: "category",
+            gridLines: {
+              drawOnChartArea: false, // only want the grid lines for one axis to show up
+            },
+            ticks: {
+              callback: function (label) {
+                var date = label.split(";")[0];
+                var month = label.split(";")[1];
+                var year = label.split(";")[2];
+                if (date === "01" || date === "08" || date === "20" || date === "25") {
+                  return month + ", " + year;
+                }
+                else {
+                  return "";
+                }
+              }
+            }
+          }]
+        }
+      })
+    }
+
+  })
+
+  var vm = new Vue({
+    el: '.app_Chart_gaza2021',
+    data: {
+      message: 'Cases in Gaza Accumulative in 2021'
+    }
+  })
   Vue.component('line-chart', {
     extends: VueChartJs.Bar,
     mounted() {
