@@ -48,6 +48,7 @@
         <button class="down-arrow" v-scroll-to="{ element: '#element', duration: 5000 }">▼</button>
     </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 
 <div style="width: 70%;padding-left: 10%;">
 <div class="app_Chart_gaza" id="heading_chart">
@@ -1439,15 +1440,15 @@
       mounted() {
         this.renderChart({
           labels: [
-            '27/8-16/09',
-            '17/09-7/10',
-            '8-28/10',
-            '29/10-18/11',
-            '19/11-9/12',
-            '10-31/12',
-            '01-21/01',
-            '22/01-11/02',
-            '12/02-04/03'
+            '27/8-16/09;2020',
+            '17/09-7/10;2020',
+            '8-28/10;2020',
+            '29/10-18/11;2020',
+            '19/11-9/12;2020',
+            '10-31/12;2020',
+            '01-21/01;2021',
+            '22/01-11/02;2021',
+            '12/02-04/03;2021'
       
           ],
           datasets: [{
@@ -1499,9 +1500,32 @@
                 display: false
               },
               ticks: {
-                beginAtZero: false
+                beginAtZero: false,
+                callback:function(label){
+                  var date = label.split(";")[0];
+                  var year =label.split(";")[1];
+                  return date;
+                }
               }
-            }]
+            },
+          {
+                id: 'xAxis-2',
+                type: "category",
+                gridLines: {
+                  drawOnChartArea: false, // only want the grid lines for one axis to show up
+                },
+                ticks: {
+                  callback: function (label) {
+                    var date = label.split(";")[0];
+                    var year = label.split(";")[1];
+                    if (date === "8-28/10") {
+                      return year;
+                    } else if(date==="01-21/01"){
+                      return year;
+                    }
+                  }
+                }
+              }]
           }
         })
       }
