@@ -7,14 +7,25 @@
     <title>Document</title>
 </head>
 <body style="width: 30%; padding-left: 20%;">
-    <div id="observablehq-image-fba31784"></div>
-    <p>Credit: <a href="https://observablehq.com/d/d4085a4074ce4fc0">Voronoi Stippling</a></p>
+    <div id="observablehq-image-15cfd508"></div>
+    <p>Credit: <a href="https://observablehq.com/d/d4085a4074ce4fc0">Voronoi Stippling by Mohammed ALRUZZI</a></p>
     
     <script type="module">
         import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
         import define from "https://api.observablehq.com/d/d4085a4074ce4fc0.js?v=3";
         new Runtime().module(define, name => {
-            if (name === "image") return new Inspector(document.querySelector("#observablehq-image-fba31784"));
+            if (name === "image") return new Inspector(document.querySelector("#observablehq-image-15cfd508"));
+        });
+    </script>
+    <div id="observablehq-chart-fc939c11"></div>
+    <p>Credit: <a href="https://observablehq.com/@mohammedalrozzi/collision-detection">Collision Detection by Mohammed
+            ALRUZZI</a></p>
+    
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/@mohammedalrozzi/collision-detection.js?v=3";
+        new Runtime().module(define, name => {
+            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-fc939c11"));
         });
     </script>
 </body>
