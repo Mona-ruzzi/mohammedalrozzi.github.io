@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="chart2"></canvas>
+    </div>
+    <div id="wrapper">
+        <canvas id="chart"></canvas>
+    </div>
+<style>
+    #wrapper {
+  height: 350px;
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 50px;
+}
+</style>
+
+<script>
+    function makeChart(players) {
+        // players is an array of objects where each object is something like:
+        // {
+        //   "Name": "Steffi Graf",
+        //   "Weeks": "377",
+        //   "Gender": "Female"
+        // }
+      
+
+        var playerLabels = players.map(function (d) {
+            return d.Date;
+        });
+        var Daily_cases = players.map(function (d) {
+            return +d.DailyCases;
+        });
+        var Total_cases = players.map(function (d) {
+            return +d.TotalCases;
+        });
+        var Daily_death = players.map(function (d) {
+            return +d.DailyDeath;
+        });
+        var Total_death = players.map(function (d) {
+            return +d.TotalDeath;
+        });
+        var Daily_recovery = players.map(function (d) {
+            return +d.DailyRecovery;
+        });
+        var Total_recovery = players.map(function (d) {
+            return +d.TotalRecovery;
+        });
+        var Active_cases = players.map(function (d) {
+            return +d.ActiveCases;
+        });
+        var Daily_tests = players.map(function (d) {
+            return +d.DailyTests;
+        });
+        var Total_tests = players.map(function (d) {
+            return +d.TotalTests;
+        });
+        var chart = new Chart('chart2', {
+            type: "bar",
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: true,
+                }
+            },
+            data: {
+                labels: playerLabels,
+                datasets: [
+                    {
+                        data: Daily_death,
+                     
+                    }
+                ],
+
+            }
+        });
+        var chart = new Chart('chart', {
+            type: "line",
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: true,
+                
+                }
+            },
+            
+            data: {
+                labels: playerLabels,
+                datasets: [
+                    {
+                        data: Total_cases,
+                        
+                    },
+                    {
+                        data: Total_recovery
+                    }
+                    ,
+                ]
+            }
+        });
+
+    }
+
+    // Request data using D3
+    d3
+        .csv("stats-new.csv")
+        .then(makeChart);
+
+</script>
+</body>
+</html>
