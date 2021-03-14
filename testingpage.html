@@ -15,6 +15,9 @@
     <div id="wrapper">
         <canvas id="chart"></canvas>
     </div>
+    <div id="wrapper">
+        <canvas id="chart3"></canvas>
+    </div>
 <style>
     #wrapper {
   height: 350px;
@@ -117,6 +120,30 @@
         
                     }
                     ,
+                ]
+            }
+        });
+        var chart = new Chart('chart3', {
+            type: "line",
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: true,
+
+                }
+            },
+
+            data: {
+                labels: playerLabels,
+                datasets: [
+                    {
+                        data: Active_cases,
+                        label: "Active Cases",
+                        backgroundColor: '#408bd670',
+                        order: 0,
+
+                    },
+                    
                 ]
             }
         });
