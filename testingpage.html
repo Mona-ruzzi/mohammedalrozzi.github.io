@@ -68,7 +68,7 @@
             return +d.TotalTests;
         });
         var chart = new Chart('chart2', {
-            type: "bar",
+            type: "Bar",
             options: {
                 maintainAspectRatio: false,
                 legend: {
@@ -85,8 +85,8 @@
                 datasets: [
                     {
                         data: Daily_death,
-                        label:"Daily Deaths"
-                     
+                        label:"Daily Deaths",
+                        hoverBackgroundColor:"red"	                    
                     },
                 ],
 
