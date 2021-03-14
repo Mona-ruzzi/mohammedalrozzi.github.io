@@ -70,7 +70,9 @@
                 maintainAspectRatio: false,
                 legend: {
                     display: true,
-                }
+                    
+                },
+
             },
             data: {
                 labels: playerLabels,
@@ -78,10 +80,11 @@
                     {
                         data: Daily_death,
                      
-                    }
+                    },
                 ],
 
-            }
+            },
+        
         });
         var chart = new Chart('chart', {
             type: "line",
