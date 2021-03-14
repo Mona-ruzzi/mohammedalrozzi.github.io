@@ -70,6 +70,9 @@
                 maintainAspectRatio: false,
                 legend: {
                     display: true,
+                    labels: {
+                        fontColor: 'black'
+                    },
                     
                 },
 
@@ -79,6 +82,7 @@
                 datasets: [
                     {
                         data: Daily_death,
+                        label:"Daily Deaths"
                      
                     },
                 ],
@@ -101,10 +105,16 @@
                 datasets: [
                     {
                         data: Total_cases,
-                        
+                        label:"Total Cases",
+                        backgroundColor: 'rgb(255, 99, 132,0.2)',
+                        order:0,
+                
                     },
                     {
-                        data: Total_recovery
+                        data: Total_recovery,
+                        label:"Total Recovery",
+                        backgroundColor: 'rgb(255, 99, 132,0.4)',
+        
                     }
                     ,
                 ]
