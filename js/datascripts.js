@@ -35,6 +35,59 @@ function makeChart(players) {
         type: "bar",
         options: {
             maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    id: 'y-axis-0',
+                    gridLines: {
+                        display: true,
+                        lineWidth: 1,
+                        color: "rgba(0,0,0,0.30)"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        mirror: false,
+                        suggestedMin: 0,
+                    },
+                    afterBuildTicks: function (chart) {
+
+                    }
+                }],
+                xAxes: [{
+                    id: 'x-axis-0',
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2]
+                            return date+"/"+month;
+                        }
+                    }
+                },
+                {
+                    id: 'xAxis-2',
+                    type: "category",
+                    gridLines: {
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
+                    },
+                    ticks: {
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2];
+                            if (date + month === "0512" || date + month === "1612" ||date + month === "0801" || date + month === "1101") {
+                                return month + "/" + year;
+                            }
+                            else {
+                                return "";
+                            }
+                        }
+                    }
+                }]
+            },
             legend: {
                 display: true,
                 labels: {
@@ -62,6 +115,59 @@ function makeChart(players) {
         type: "line",
         options: {
             maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    id: 'y-axis-0',
+                    gridLines: {
+                        display: true,
+                        lineWidth: 1,
+                        color: "rgba(0,0,0,0.30)"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        mirror: false,
+                        suggestedMin: 0,
+                    },
+                    afterBuildTicks: function (chart) {
+
+                    }
+                }],
+                xAxes: [{
+                    id: 'x-axis-0',
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2]
+                            return date + "/" + month;
+                        }
+                    }
+                },
+                {
+                    id: 'xAxis-2',
+                    type: "category",
+                    gridLines: {
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
+                    },
+                    ticks: {
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2];
+                            if (date + month === "0512" || date + month === "1612" || date + month === "0801" || date + month === "1101") {
+                                return month + "/" + year;
+                            }
+                            else {
+                                return "";
+                            }
+                        }
+                    }
+                }]
+            },
             legend: {
                 display: true,
             
@@ -93,6 +199,40 @@ function makeChart(players) {
         type: "line",
         options: {
             maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    id: 'y-axis-0',
+                    gridLines: {
+                        display: true,
+                        lineWidth: 1,
+                        color: "rgba(0,0,0,0.30)"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        mirror: false,
+                        suggestedMin: 0,
+                    },
+                    afterBuildTicks: function (chart) {
+
+                    }
+                }],
+                xAxes: [{
+                    id: 'x-axis-0',
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2]
+                            return date + "/" + month;
+                        }
+                    }
+                },
+                ]
+            },
             legend: {
                 display: true,
 
