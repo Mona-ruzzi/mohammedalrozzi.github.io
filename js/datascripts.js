@@ -31,6 +31,9 @@ function makeChart(players) {
     var Total_tests = players.map(function (d) {
         return +d.TotalTests;
     });
+    var daily_vaccine =players.map(function(d){
+        return +d.Vaccines;
+    });
     var chart = new Chart('chart2', {
         type: "bar",
         options: {

@@ -50,7 +50,61 @@
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="./js/axioscalls.js"></script>
 <script src="/js/datascripts.js"></script>
+<div class="container" id="palestine-figures" style="width: 250px;">
+  <h2 class="nav-bar" style="text-align: center;">Palestine figures </h2>
+  <p v-if="errored">the information currently unavailable</p>
+  <p v-else-if="loading">loading...</p>
+  <div v-else>
+    <table class="pure-table pure-table-horizontal" id="palestine-figures" style="width:250px; border: none;">
+      <tbody>
+        <tr>
+          <td>
+            <p>Total Cases</p>
+          </td>
+          <td>
+            <p>{{info.data.TotalPalestineCases}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>West Bank and Gaza</p>
+          </td>
+          <td>
+            <p>{{info.data.TotalCases}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Gaza</p>
+          </td>
+          <td>
+            <p>{{info.data.TotalGazaCases}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Death</p>
+          </td>
+          <td>
+            <p>{{info.data.TotalDeath}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Total Active</p>
+          </td>
+          <td>
+            <p>{{info.data.TotalActiveCases}}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <br>
+</div>
 <div class="center">
 <div id="wrapper">
   <canvas id="chart2"></canvas>
@@ -138,6 +192,7 @@
   width: 80%;
   border: 1px solid grey;
   padding: 10px;
+  margin-top: 10px;
 }
   .app_Chart_gaza
   .app_Chart_gaza_3
