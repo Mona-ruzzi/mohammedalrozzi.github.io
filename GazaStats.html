@@ -52,59 +52,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="./js/axioscalls.js"></script>
 <script src="/js/datascripts.js"></script>
-<div class="container" id="palestine-figures" style="width: 250px;">
-  <h2 class="nav-bar" style="text-align: center;">Palestine figures </h2>
-  <p v-if="errored">the information currently unavailable</p>
-  <p v-else-if="loading">loading...</p>
-  <div v-else>
-    <table class="pure-table pure-table-horizontal" id="palestine-figures" style="width:250px; border: none;">
-      <tbody>
-        <tr>
-          <td>
-            <p>Total Cases</p>
-          </td>
-          <td>
-            <p>{{info.data.TotalPalestineCases}}</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>West Bank and Gaza</p>
-          </td>
-          <td>
-            <p>{{info.data.TotalCases}}</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Gaza</p>
-          </td>
-          <td>
-            <p>{{info.data.TotalGazaCases}}</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Death</p>
-          </td>
-          <td>
-            <p>{{info.data.TotalDeath}}</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Total Active</p>
-          </td>
-          <td>
-            <p>{{info.data.TotalActiveCases}}</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
-  <br>
+<div class="center">
+<div class="wrapper" id="palestine-figures">
+  <div class="box_ a" style="text-decoration:underline;">Summary</div>
+  <div class="box_ a">Total Cases: {{info.data.TotalPalestineCases}}</div>
+  <div class="box_ b">Gaza and & West Bank: {{info.data.TotalCases}}</div>
+  <div class="box_ c">Gaza Total Cases: {{info.data.TotalGazaCases}}</div>
+  <div class="box_ d">Total Death Cases: {{info.data.TotalDeath}}</div>
+  <div class="box_ e">Total Active cases: {{info.data.TotalActiveCases}}</div>
 </div>
+</div>
+
 <div class="center">
 <div id="wrapper">
   <canvas id="chart4"></canvas>
@@ -413,6 +371,19 @@
     #wrapper {
   height: 350px;
   padding-top: 50px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.box_ {
+  background-color: #313438;
+  color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 14px;
 }
 </style>
 </body>
