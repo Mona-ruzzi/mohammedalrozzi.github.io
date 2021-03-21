@@ -1,4 +1,4 @@
-Date,           DailyCases,TotalCases,DailyDeath,TotalDeath,DailyRecovery,TotalRecovery,ActiveCases,DailyTests,TotalTests,Vaccines
+Date,DailyCases,TotalCases,DailyDeath,TotalDeath,DailyRecovery,TotalRecovery,ActiveCases,DailyTests,TotalTests,Vaccines
 31-08-2020,     69,     356,    4,      4,      0,      72,         280,        670,  
 01-09-2020,     44,     400,    1,      5,      4,      76,         319,        1078,       1748 + 4610
 02-09-2020,     84,     483,    0,      5,      0,      76,         402,        1281,       3029 + 4610 
