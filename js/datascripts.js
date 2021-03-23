@@ -1,44 +1,34 @@
 
-function makeChart(players) {
-    
-    var playerLabels = players.map(function (d) {
+function makeChart(covid19) {
+    var covidLabels = covid19.map(function (d) {
         return d.Date;
     });
-    var Vaccines_delivered_1_2 = ["27-02-2021","01-03-2021","05-03-2021","08-03-2021","11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021", "21-03-2021", "23-03-2021",]
-    ;
-    var Vaccine_d_1 = [384, 727, 2343, 3402,4746,5432,5531,7084,7482, 10691, 12886]
-    ;
-    var Vaccine_d_2 = [null,null,null,null,null,null,null,null,null, 375, 721]
-        ;
-    var Daily_cases = players.map(function (d) {
+    var Daily_cases = covid19.map(function (d) {
         return +d.DailyCases;
     });
-    var Total_cases = players.map(function (d) {
+    var Total_cases = covid19.map(function (d) {
         return +d.TotalCases;
     });
-    var Daily_death = players.map(function (d) {
+    var Daily_death = covid19.map(function (d) {
         return +d.DailyDeath;
     });
-    var Total_death = players.map(function (d) {
+    var Total_death = covid19.map(function (d) {
         return +d.TotalDeath;
     });
-    var Daily_recovery = players.map(function (d) {
+    var Daily_recovery = covid19.map(function (d) {
         return +d.DailyRecovery;
     });
-    var Total_recovery = players.map(function (d) {
+    var Total_recovery = covid19.map(function (d) {
         return +d.TotalRecovery;
     });
-    var Active_cases = players.map(function (d) {
+    var Active_cases = covid19.map(function (d) {
         return +d.ActiveCases;
     });
-    var Daily_tests = players.map(function (d) {
+    var Daily_tests = covid19.map(function (d) {
         return +d.DailyTests;
     });
-    var Total_tests = players.map(function (d) {
+    var Total_tests = covid19.map(function (d) {
         return +d.TotalTests;
-    });
-    var daily_vaccine =players.map(function(d){
-        return +d.Vaccines;
     });
     var chart = new Chart('chart2', {
         type: "bar",
@@ -107,7 +97,7 @@ function makeChart(players) {
 
         },
         data: {
-            labels: playerLabels,
+            labels: covidLabels,
             datasets: [
                 {
                     data: Daily_death,
@@ -187,7 +177,7 @@ function makeChart(players) {
 
         },
         data: {
-            labels: playerLabels,
+            labels: covidLabels,
             datasets: [
                 {
                     data: Daily_cases,
@@ -264,7 +254,7 @@ function makeChart(players) {
         },
         
         data: {
-            labels: playerLabels,
+            labels: covidLabels,
             datasets: [
                 {
                     data: Total_cases,
@@ -329,7 +319,7 @@ function makeChart(players) {
         },
 
         data: {
-            labels: playerLabels,
+            labels: covidLabels,
             datasets: [
                 {
                     data: Active_cases,
@@ -406,17 +396,17 @@ function makeChart(players) {
         },
 
         data: {
-            labels: Vaccines_delivered_1_2,
+            labels: ["27-02-2021","01-03-2021","05-03-2021","08-03-2021","11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021","21-03-2021","23-03-2021",],
             datasets: [
                 {
-                    data: Vaccine_d_1,
+                    data: [384,727,2343,3402,4746,5432,5531,7084,7482,10691,12886,],
                     label: "Total Vaccine - 1st dose",
                     backgroundColor: 'rgb(255, 99, 132,0.2)',
                     order: 1,
 
                 },
                 {
-                    data: Vaccine_d_2,
+                    data: [null,null,null,null,null,null,null,null,null,375,721],
                     label: "Total Vaccine - 2nd dose",
                     backgroundColor: 'rgb(255, 99, 132,0.4)',
                     order: 2,
@@ -432,7 +422,6 @@ function makeChart(players) {
 d3
     .csv("stats-new.csv")
     .then(makeChart);
-
 
 var tabulate = function (data, columns) {
 var table = d3.select('#myTable') // this is the solution
