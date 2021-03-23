@@ -4,6 +4,12 @@ function makeChart(players) {
     var playerLabels = players.map(function (d) {
         return d.Date;
     });
+    var Vaccines_delivered_1_2 = ["11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021", "21-03-2021", "23-03-2021",]
+    ;
+    var Vaccine_d_1 = [4746,5432,5531,7084,7482, 10691, 12886]
+    ;
+    var Vaccine_d_2 = [null,null,null,null,null, 375, 721]
+        ;
     var Daily_cases = players.map(function (d) {
         return +d.DailyCases;
     });
@@ -333,6 +339,90 @@ function makeChart(players) {
 
                 },
                 
+            ]
+        }
+    });
+    var chart = new Chart('chart6', {
+        type: "line",
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    id: 'y-axis-0',
+                    gridLines: {
+                        display: true,
+                        lineWidth: 1,
+                        color: "rgba(0,0,0,0.30)"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        mirror: false,
+                        suggestedMin: 0,
+                    },
+                    afterBuildTicks: function (chart) {
+
+                    }
+                }],
+                xAxes: [{
+                    id: 'x-axis-0',
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2]
+                            return date + "/" + month;
+                        }
+                    }
+                },
+                {
+                    id: 'xAxis-2',
+                    type: "category",
+                    gridLines: {
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
+                    },
+                    ticks: {
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2];
+                            if (date + month === "0512" || date + month === "1612" || date + month === "0801" || date + month === "1101") {
+                                return month + "/" + year;
+                            }
+                            else {
+                                return "";
+                            }
+                        }
+                    }
+                }]
+            },
+            legend: {
+                display: true,
+
+            }
+        },
+
+        data: {
+            labels: Vaccines_delivered_1_2,
+            datasets: [
+                {
+                    data: Vaccine_d_1,
+                    label: "Total Vaccine - 1st dose",
+                    backgroundColor: 'rgb(255, 99, 132,0.2)',
+                    order: 1,
+
+                },
+                {
+                    data: Vaccine_d_2,
+                    label: "Total Vaccine - 2nd dose",
+                    backgroundColor: 'rgb(255, 99, 132,0.4)',
+                    order: 2,
+
+                }
+                ,
             ]
         }
     });
