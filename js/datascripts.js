@@ -4,11 +4,11 @@ function makeChart(players) {
     var playerLabels = players.map(function (d) {
         return d.Date;
     });
-    var Vaccines_delivered_1_2 = ["11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021", "21-03-2021", "23-03-2021",]
+    var Vaccines_delivered_1_2 = ["27-02-2021","01-03-2021","05-03-2021","08-03-2021","11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021", "21-03-2021", "23-03-2021",]
     ;
-    var Vaccine_d_1 = [4746,5432,5531,7084,7482, 10691, 12886]
+    var Vaccine_d_1 = [384, 727, 2343, 3402,4746,5432,5531,7084,7482, 10691, 12886]
     ;
-    var Vaccine_d_2 = [null,null,null,null,null, 375, 721]
+    var Vaccine_d_2 = [null,null,null,null,null,null,null,null,null, 375, 721]
         ;
     var Daily_cases = players.map(function (d) {
         return +d.DailyCases;
