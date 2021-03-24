@@ -519,11 +519,11 @@ function makeVaccineCharts(vaccines) {
 
 // Request data using D3
 d3
-    .csv("stats-new.csv")
+    .csv("assets/stats-new.csv")
     .then(makeChart);
 //just added for the vaccines
 d3
-    .csv("vaccines.csv")
+    .csv("assets/vaccines.csv")
     .then(makeVaccineCharts);
 
 var tabulate = function (data, columns) {
@@ -556,7 +556,7 @@ var cells = rows.selectAll('td')
 
 return table;
 }
-d3.csv('stats-new.csv')
+d3.csv('assets/stats-new.csv')
 .then(function (data) {
     const columns = ['Date','DailyCases', 'TotalCases', 'DailyDeath', 'TotalDeath', 'DailyRecovery', 'TotalRecovery', 'ActiveCases']
     tabulate(data, columns)
