@@ -1,4 +1,4 @@
-
+//this is for the cases count
 function makeChart(covid19) {
     var covidLabels = covid19.map(function (d) {
         return d.Date;
@@ -396,10 +396,12 @@ function makeChart(covid19) {
         },
 
         data: {
-            labels: ["27-02-2021","01-03-2021","05-03-2021","08-03-2021","11-03-2021","12-03-2021","13-03-2021","15-03-2021","16-03-2021","21-03-2021","23-03-2021",],
+            labels: [   "27-02-2021","01-03-2021","05-03-2021","08-03-2021","11-03-2021","12-03-2021",
+                        "13-03-2021","15-03-2021","16-03-2021","21-03-2021","23-03-2021",],
             datasets: [
                 {
-                    data: [384,727,2343,3402,4746,5432,5531,7084,7482,10691,12886,],
+                    data: [ 384,727,2343,3402,4746,5432,
+                            5531,7084,7482,10691,12886,],
                     label: "Total Vaccine - 1st dose",
                     backgroundColor: 'rgb(255, 99, 132,0.2)',
                     order: 1,
@@ -417,11 +419,112 @@ function makeChart(covid19) {
         }
     });
 }
+function makingChart(vaccines) {
+    var covid2Labels = vaccines.map(function (d) {
+        return d.Date_new;
+    });
+    var first_dose = vaccines.map(function (d) {
+        return +d.firstDose;
+    });
+    var second_dose = vaccines.map(function (d) {
+        return +d.secondDose;
+    });
+
+    var chart = new Chart('chartVaccine', {
+        type: "line",
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    id: 'y-axis-0',
+                    gridLines: {
+                        display: true,
+                        lineWidth: 1,
+                        color: "rgba(0,0,0,0.30)"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        mirror: false,
+                        suggestedMin: 0,
+                    },
+                    afterBuildTicks: function (chart) {
+
+                    }
+                }],
+                xAxes: [{
+                    id: 'x-axis-0',
+                    gridLines: {
+                        display: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2]
+                            return date + "/" + month;
+                        }
+                    }
+                },
+                {
+                    id: 'xAxis-2',
+                    type: "category",
+                    gridLines: {
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
+                    },
+                    ticks: {
+                        callback: function (label) {
+                            var date = label.split("-")[0];
+                            var month = label.split("-")[1];
+                            var year = label.split("-")[2];
+                            if (date + month === "2702" || date + month === "2103" || date + month === "0801" || date + month === "1101") {
+                                return month + "/" + year;
+                            }
+                            else {
+                                return "";
+                            }
+                        }
+                    }
+                }]
+            },
+            legend: {
+                display: true,
+
+            }
+        },
+
+        data: {
+            labels: covid2Labels,
+            datasets: [
+                {
+                    data: first_dose,
+                    label: "first dose",
+                    backgroundColor: 'rgb(255, 99, 132,0.2)',
+                    order: 1,
+
+                },
+                {
+                    data: second_dose,
+                    label: "second dose",
+                    backgroundColor: 'rgb(255, 99, 132,0.4)',
+                    order: 2,
+
+                }
+                ,
+            ]
+        }
+    });
+
+}
 
 // Request data using D3
 d3
     .csv("stats-new.csv")
     .then(makeChart);
+//just added for the vaccines
+d3
+    .csv("vaccines.csv")
+    .then(makingChart);
 
 var tabulate = function (data, columns) {
 var table = d3.select('#myTable') // this is the solution
