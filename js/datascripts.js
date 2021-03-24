@@ -419,7 +419,7 @@ function makeChart(covid19) {
         }
     });
 }
-function makingChart(vaccines) {
+function makeVaccineCharts(vaccines) {
     var covid2Labels = vaccines.map(function (d) {
         return d.Date_new;
     });
@@ -524,7 +524,7 @@ d3
 //just added for the vaccines
 d3
     .csv("vaccines.csv")
-    .then(makingChart);
+    .then(makeVaccineCharts);
 
 var tabulate = function (data, columns) {
 var table = d3.select('#myTable') // this is the solution
